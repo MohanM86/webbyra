@@ -1,19 +1,35 @@
 # Webbyrå.no
 
-> Norges fremste webbyrå. Vi designer og utvikler nettsider, nettbutikker og webapplikasjoner som konverterer.
+> Norges fremste webbyrå. Vi designer, utvikler og drifter nettsider, nettbutikker og webapplikasjoner for norske bedrifter. Fast månedlig partnerskap — alt inkludert fra A til Å.
 
 ## Om oss
 
-Webbyrå.no er et norsk webbyrå som spesialiserer seg på webdesign, webutvikling, nettbutikker, webapplikasjoner, søkemotoroptimalisering (SEO) og konverteringsoptimalisering (CRO). Vi bruker moderne teknologier som Next.js, React, TypeScript, Sanity CMS og Shopify.
+Webbyrå.no er en premium norsk webbyrå med hovedkontor i Oslo. Vi tilbyr faste månedlige partnerskap der vi tar ansvar for hele den digitale tilstedeværelsen — design, utvikling, drift, SEO, innhold og vekst. Vi eier et økosystem av premium .no-domener innen web.
 
 ## Tjenester
 
-- Nettsideutvikling: Responsive bedriftssider med SEO innebygd
-- Webapplikasjoner: Skreddersydde dashboards og plattformer
-- Nettbutikk & e-handel: Shopify, WooCommerce eller skreddersydd
-- Søkemotoroptimalisering: Teknisk SEO, innholdsstrategi, lenkebygging
-- Konverteringsoptimalisering: A/B-testing og datadrevet optimalisering
-- Arkitektur & rådgivning: Teknologivalg og infrastruktur
+- Webdesign: Skreddersydd design som konverterer
+- Webutvikling: Next.js, React, TypeScript
+- Nettbutikk & e-handel: Shopify, WooCommerce, skreddersydd
+- Søkemotoroptimalisering (SEO): Teknisk SEO, innholdsstrategi, lokal SEO
+- Google Ads & betalt annonsering: SEM, remarketing, kampanjestyring
+- AI-integrasjon: Chatboter, AI-assistenter, automatisering
+- Logo & visuell identitet: Logodesign, brandbook, farger, typografi
+- Innholdsproduksjon: Webtekst, copywriting, foto, video
+- Sosiale medier: Strategi, innhold, annonsering
+- Domene & hosting: Registrering, DNS, SSL, hosting
+- E-post & nyhetsbrev: Bedrifts-e-post, nyhetsbrev, automatisering
+- Webapplikasjoner: Dashboards, plattformer, digitale verktøy
+- Konverteringsoptimalisering: A/B-testing, brukeranalyse
+- Vedlikehold & support: Sikkerhetsoppdateringer, overvåking, support
+
+## Økosystem
+
+Vi eier følgende premium domener: webbyrå.no, smbweb.no, ainettside.no, ainettbutikk.no, webmedia.no, webadresse.no, web4.no
+
+## Byer vi betjener
+
+Oslo, Bergen, Trondheim, Stavanger, Drammen, Fredrikstad, Kristiansand, Sandnes, Tromsø, Sarpsborg, Skien, Ålesund, Sandefjord, Haugesund, Tønsberg, Moss, Porsgrunn, Bodø, Arendal, Hamar, Larvik, Halden, Harstad, Lillehammer, Molde, Kongsberg, Horten, Gjøvik, Mandal, Steinkjer, Elverum, Namsos, Florø, Hammerfest, Narvik, Mo i Rana, Alta, Kristiansund, Grimstad, Kongsvinger, Verdal, Notodden, Risør, Bryne, Jessheim, Ski, Asker, Lørenskog, Bærum, Lillestrøm
 
 ## Kontakt
 
