@@ -1,0 +1,22 @@
+# Webbyrå.no
+
+> Norges fremste webbyrå. Vi designer og utvikler nettsider, nettbutikker og webapplikasjoner som konverterer.
+
+## Om oss
+
+Webbyrå.no er et norsk webbyrå som spesialiserer seg på webdesign, webutvikling, nettbutikker, webapplikasjoner, søkemotoroptimalisering (SEO) og konverteringsoptimalisering (CRO). Vi bruker moderne teknologier som Next.js, React, TypeScript, Sanity CMS og Shopify.
+
+## Tjenester
+
+- Nettsideutvikling: Responsive bedriftssider med SEO innebygd
+- Webapplikasjoner: Skreddersydde dashboards og plattformer
+- Nettbutikk & e-handel: Shopify, WooCommerce eller skreddersydd
+- Søkemotoroptimalisering: Teknisk SEO, innholdsstrategi, lenkebygging
+- Konverteringsoptimalisering: A/B-testing og datadrevet optimalisering
+- Arkitektur & rådgivning: Teknologivalg og infrastruktur
+
+## Kontakt
+
+- Nettside: https://webbyrå.no
+- E-post: hei@webbyrå.no
+- Sted: Oslo, Norge

@@ -1,0 +1,14 @@
+/* TEAM */
+Firma: Webbyrå.no
+Sted: Oslo, Norge
+Nettside: https://webbyrå.no
+
+/* TEKNOLOGI */
+Frontend: Next.js, React, TypeScript, Tailwind CSS
+CMS: Sanity, Contentful, WordPress
+Hosting: Vercel
+Design: Figma
+Fonts: Syne, Inter, JetBrains Mono
+
+/* SIST OPPDATERT */
+2026-03-02
