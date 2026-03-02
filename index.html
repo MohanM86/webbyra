@@ -374,6 +374,11 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 .blog__card:hover .blog__link{color:var(--c1)}
 .blog__card:hover .blog__link svg{transform:translateX(3px)}
 
+/* BYER */
+.byer__grid{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem}
+.by{padding:.45rem 1rem;border:1px solid var(--w08);border-radius:100px;font-size:.72rem;font-weight:500;color:var(--w50);text-decoration:none;transition:all .3s var(--ease);white-space:nowrap}
+.by:hover{border-color:rgba(0,212,255,.2);color:var(--c1);background:rgba(0,212,255,.03);transform:translateY(-1px)}
+
 /* RESPONSIVE */
 @media(max-width:1024px){.hero{grid-template-columns:1fr;gap:2rem}.hero__l,.hero__r{padding:0 clamp(1.5rem,4vw,3.5rem)}.cube__canvas{width:250px;height:250px}.bento{grid-template-columns:repeat(6,1fr)}.bc--lg{grid-column:span 6}.bc--md{grid-column:span 3}.bc--half{grid-column:span 6}.stats{grid-template-columns:repeat(2,1fr)}.st{border-bottom:1px solid var(--w08)}.ft__g{grid-template-columns:1fr 1fr}.phil{grid-template-columns:1fr}.bransjer{grid-template-columns:repeat(3,1fr)}.deliv{grid-template-columns:repeat(2,1fr)}.pricing{grid-template-columns:1fr}.partners{grid-template-columns:repeat(2,1fr)}.blog__grid{grid-template-columns:1fr}}
 @media(max-width:768px){.nl{display:none;flex-direction:column;position:fixed;inset:0;background:rgba(5,5,5,.98);backdrop-filter:blur(30px);padding:5rem 2rem;gap:0;z-index:999}.nl.op{display:flex}.nl a{font-size:1.1rem;padding:1rem 0;border-bottom:1px solid var(--w08);color:var(--w)}.hb{display:block}.bento{grid-template-columns:1fr}.bc--lg,.bc--md,.bc--half{grid-column:span 1}.stats{grid-template-columns:1fr}.ft__g{grid-template-columns:1fr}.hero__r{display:none}.cur,.trail{display:none}body{cursor:auto}.btn,.eco__p,.hb,.fq,.bc,.tpp,.phil__item,.bransje,.deliv__col,.price__card,.partner,.blog__card{cursor:auto}.tl{padding-left:2rem}.tl::before{left:7px}.tls__dot{left:-2rem;width:16px;height:16px}.tls__dot::after{width:4px;height:4px}.bransjer{grid-template-columns:repeat(2,1fr)}.deliv{grid-template-columns:1fr}.partners{grid-template-columns:1fr}}
@@ -672,6 +677,65 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <div class="eco__gh">7</div>
 <div class="sec__lb">Vårt økosystem</div><h2 class="sec__t">Et nettverk av<br><span class="grad">digitale merkevarer</span></h2><p class="sec__d">Vi driver et voksende økosystem av spesialiserte domener — alle bygget med vår egen teknologi.</p>
 <div class="eco__g"><a href="#" class="eco__p">webbyrå.no</a><a href="#" class="eco__p">smbweb.no</a><a href="#" class="eco__p">ainettside.no</a><a href="#" class="eco__p">ainettbutikk.no</a><a href="#" class="eco__p">webmedia.no</a><a href="#" class="eco__p">webadresse.no</a><a href="#" class="eco__p">web4.no</a></div>
+</div></section>
+
+<!-- BYER -->
+<section class="sec" id="byer"><div class="ctn">
+<div class="sec__lb">Lokal tilstedeværelse</div>
+<h2 class="sec__t">Webbyrå i <span class="grad">hele Norge</span></h2>
+<p class="sec__d">Vi betjener bedrifter over hele landet. Finn din by nedenfor.</p>
+<div class="byer__grid">
+<a href="/byer/oslo/" class="by">Oslo</a>
+<a href="/byer/bergen/" class="by">Bergen</a>
+<a href="/byer/trondheim/" class="by">Trondheim</a>
+<a href="/byer/stavanger/" class="by">Stavanger</a>
+<a href="/byer/drammen/" class="by">Drammen</a>
+<a href="/byer/fredrikstad/" class="by">Fredrikstad</a>
+<a href="/byer/kristiansand/" class="by">Kristiansand</a>
+<a href="/byer/sandnes/" class="by">Sandnes</a>
+<a href="/byer/tromso/" class="by">Tromsø</a>
+<a href="/byer/sarpsborg/" class="by">Sarpsborg</a>
+<a href="/byer/skien/" class="by">Skien</a>
+<a href="/byer/aalesund/" class="by">Ålesund</a>
+<a href="/byer/sandefjord/" class="by">Sandefjord</a>
+<a href="/byer/haugesund/" class="by">Haugesund</a>
+<a href="/byer/tonsberg/" class="by">Tønsberg</a>
+<a href="/byer/moss/" class="by">Moss</a>
+<a href="/byer/porsgrunn/" class="by">Porsgrunn</a>
+<a href="/byer/bodoe/" class="by">Bodø</a>
+<a href="/byer/arendal/" class="by">Arendal</a>
+<a href="/byer/hamar/" class="by">Hamar</a>
+<a href="/byer/larvik/" class="by">Larvik</a>
+<a href="/byer/halden/" class="by">Halden</a>
+<a href="/byer/harstad/" class="by">Harstad</a>
+<a href="/byer/lillehammer/" class="by">Lillehammer</a>
+<a href="/byer/molde/" class="by">Molde</a>
+<a href="/byer/kongsberg/" class="by">Kongsberg</a>
+<a href="/byer/horten/" class="by">Horten</a>
+<a href="/byer/gjovik/" class="by">Gjøvik</a>
+<a href="/byer/mandal/" class="by">Mandal</a>
+<a href="/byer/steinkjer/" class="by">Steinkjer</a>
+<a href="/byer/elverum/" class="by">Elverum</a>
+<a href="/byer/namsos/" class="by">Namsos</a>
+<a href="/byer/floro/" class="by">Florø</a>
+<a href="/byer/hammerfest/" class="by">Hammerfest</a>
+<a href="/byer/narvik/" class="by">Narvik</a>
+<a href="/byer/rana/" class="by">Mo i Rana</a>
+<a href="/byer/alta/" class="by">Alta</a>
+<a href="/byer/kristiansund/" class="by">Kristiansund</a>
+<a href="/byer/grimstad/" class="by">Grimstad</a>
+<a href="/byer/kongsvinger/" class="by">Kongsvinger</a>
+<a href="/byer/verdal/" class="by">Verdal</a>
+<a href="/byer/notodden/" class="by">Notodden</a>
+<a href="/byer/risor/" class="by">Risør</a>
+<a href="/byer/bryne/" class="by">Bryne</a>
+<a href="/byer/jessheim/" class="by">Jessheim</a>
+<a href="/byer/ski/" class="by">Ski</a>
+<a href="/byer/asker/" class="by">Asker</a>
+<a href="/byer/lorenskog/" class="by">Lørenskog</a>
+<a href="/byer/baerum/" class="by">Bærum</a>
+<a href="/byer/lillestrom/" class="by">Lillestrøm</a>
+</div>
 </div></section>
 
 <section class="sec" id="faq" style="background:var(--bg2)"><div class="ctn">
