@@ -305,9 +305,78 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 .ft__b{padding-top:2rem;border-top:1px solid var(--w08);display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
 .ft__cp{font-size:.55rem;color:var(--w15)}
 
+/* FILOSOFI */
+.phil{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.phil__item{padding:2rem;border:1px solid var(--w08);border-radius:16px;background:var(--card);transition:all .5s var(--ease);position:relative;overflow:hidden}
+.phil__item:hover{border-color:var(--w15);transform:translateY(-4px);box-shadow:0 16px 50px rgba(0,0,0,.25)}
+.phil__item::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--g1);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.phil__item:hover::before{transform:scaleX(1)}
+.phil__num{font-family:var(--mono);font-size:.5rem;letter-spacing:.2em;color:var(--c1);margin-bottom:1rem}
+.phil__t{font-family:var(--display);font-weight:700;font-size:1.05rem;margin-bottom:.5rem;letter-spacing:-.02em}
+.phil__d{font-size:.78rem;color:var(--w30);line-height:1.85}
+
+/* BRANSJER */
+.bransjer{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;margin-top:2.5rem}
+.bransje{padding:1.5rem;border:1px solid var(--w08);border-radius:14px;text-align:center;transition:all .4s var(--ease);background:var(--card)}
+.bransje:hover{border-color:rgba(0,212,255,.15);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.2)}
+.bransje__ico{width:40px;height:40px;margin:0 auto .8rem;border-radius:10px;border:1px solid var(--w08);display:flex;align-items:center;justify-content:center;transition:all .4s}
+.bransje__ico svg{width:18px;height:18px;stroke:var(--c1)}
+.bransje:hover .bransje__ico{border-color:rgba(0,212,255,.2);box-shadow:0 0 16px rgba(0,212,255,.06)}
+.bransje h4{font-family:var(--display);font-size:.85rem;font-weight:700;margin-bottom:.2rem;letter-spacing:-.02em}
+.bransje p{font-size:.65rem;color:var(--w30)}
+
+/* LEVERANSER */
+.deliv{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.5rem}
+.deliv__col{padding:1.8rem;border:1px solid var(--w08);border-radius:14px;background:var(--card);transition:all .4s var(--ease)}
+.deliv__col:hover{border-color:var(--w15)}
+.deliv__h{font-family:var(--display);font-size:.9rem;font-weight:700;margin-bottom:1rem;letter-spacing:-.02em}
+.deliv__item{font-size:.75rem;color:var(--w50);padding:.35rem 0;display:flex;align-items:flex-start;gap:.5rem;line-height:1.6}
+.deliv__check{color:var(--c1);font-weight:700;flex-shrink:0;font-size:.7rem}
+
+/* PRISPAKKER */
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:3rem}
+.price__card{padding:2.5rem 2rem;border:1px solid var(--w08);border-radius:16px;background:var(--card);transition:all .5s var(--ease);position:relative}
+.price__card:hover{border-color:var(--w15);transform:translateY(-4px);box-shadow:0 16px 50px rgba(0,0,0,.25)}
+.price__card--pop{border-color:rgba(0,212,255,.2);background:linear-gradient(180deg,rgba(0,212,255,.03),var(--card))}
+.price__card--pop:hover{border-color:rgba(0,212,255,.35);box-shadow:0 16px 50px rgba(0,212,255,.05),0 16px 50px rgba(0,0,0,.2)}
+.price__badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--g1);color:#000;font-size:.55rem;font-weight:700;padding:.3rem 1rem;border-radius:100px;letter-spacing:.05em;white-space:nowrap}
+.price__label{font-family:var(--mono);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--c1);margin-bottom:.5rem}
+.price__amount{font-family:var(--display);font-weight:800;font-size:2rem;letter-spacing:-.04em;margin-bottom:.5rem}
+.price__amount span{font-size:.9rem;font-weight:400;color:var(--w30)}
+.price__desc{font-size:.76rem;color:var(--w30);line-height:1.7;margin-bottom:1rem}
+.price__line{height:1px;background:var(--w08);margin:.5rem 0 1rem}
+.price__feat{font-size:.74rem;color:var(--w50);padding:.3rem 0;padding-left:1.2rem;position:relative}
+.price__feat::before{content:'';position:absolute;left:0;top:.65rem;width:5px;height:5px;border-radius:50%;border:1.5px solid var(--c1)}
+.price__card--pop .price__feat::before{background:var(--c1);border-color:var(--c1)}
+.price__time{font-family:var(--mono);font-size:.58rem;color:var(--w15);margin-top:1.2rem;letter-spacing:.1em}
+
+/* PARTNERE */
+.partners{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.5rem}
+.partner{padding:2rem;border:1px solid var(--w08);border-radius:14px;text-align:center;background:var(--card);transition:all .4s var(--ease)}
+.partner:hover{border-color:var(--w15);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.2)}
+.partner__logo{width:48px;height:48px;margin:0 auto .8rem;border-radius:12px;border:1px solid var(--w08);display:flex;align-items:center;justify-content:center;transition:all .4s}
+.partner__logo svg{width:22px;height:22px;stroke:var(--c1)}
+.partner:hover .partner__logo{border-color:rgba(0,212,255,.2);box-shadow:0 0 20px rgba(0,212,255,.06)}
+.partner h4{font-family:var(--display);font-size:.88rem;font-weight:700;margin-bottom:.2rem}
+.partner p{font-size:.68rem;color:var(--w30)}
+
+/* BLOGG */
+.blog__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem}
+.blog__card{padding:2rem;border:1px solid var(--w08);border-radius:16px;background:var(--card);transition:all .5s var(--ease);text-decoration:none;color:var(--w);display:block;position:relative;overflow:hidden}
+.blog__card:hover{border-color:var(--w15);transform:translateY(-4px);box-shadow:0 16px 50px rgba(0,0,0,.25)}
+.blog__card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--g1);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.blog__card:hover::before{transform:scaleX(1)}
+.blog__meta{font-family:var(--mono);font-size:.5rem;letter-spacing:.15em;color:var(--c1);margin-bottom:.8rem;text-transform:uppercase}
+.blog__t{font-family:var(--display);font-weight:700;font-size:1rem;margin-bottom:.5rem;letter-spacing:-.02em;line-height:1.25}
+.blog__d{font-size:.75rem;color:var(--w30);line-height:1.8}
+.blog__link{display:inline-flex;align-items:center;gap:.3rem;font-size:.7rem;font-weight:600;color:var(--w30);margin-top:1rem;transition:color .3s}
+.blog__link svg{width:12px;height:12px;transition:transform .3s var(--ease)}
+.blog__card:hover .blog__link{color:var(--c1)}
+.blog__card:hover .blog__link svg{transform:translateX(3px)}
+
 /* RESPONSIVE */
-@media(max-width:1024px){.hero{grid-template-columns:1fr;gap:2rem}.hero__l,.hero__r{padding:0 clamp(1.5rem,4vw,3.5rem)}.cube__canvas{width:250px;height:250px}.bento{grid-template-columns:repeat(6,1fr)}.bc--lg{grid-column:span 6}.bc--md{grid-column:span 3}.bc--half{grid-column:span 6}.stats{grid-template-columns:repeat(2,1fr)}.st{border-bottom:1px solid var(--w08)}.wg>:nth-child(2),.wg>:nth-child(4){margin-top:0}.ft__g{grid-template-columns:1fr 1fr}}
-@media(max-width:768px){.nl{display:none;flex-direction:column;position:fixed;inset:0;background:rgba(5,5,5,.98);backdrop-filter:blur(30px);padding:5rem 2rem;gap:0;z-index:999}.nl.op{display:flex}.nl a{font-size:1.1rem;padding:1rem 0;border-bottom:1px solid var(--w08);color:var(--w)}.hb{display:block}.bento{grid-template-columns:1fr}.bc--lg,.bc--md,.bc--half{grid-column:span 1}.wg{grid-template-columns:1fr}.wg>:nth-child(2),.wg>:nth-child(4){margin-top:0}.stats{grid-template-columns:1fr}.ft__g{grid-template-columns:1fr}.hero__r{display:none}.cur,.trail{display:none}body{cursor:auto}.btn,.eco__p,.hb,.fq,.bc,.wc,.tpp{cursor:auto}.tl{padding-left:2rem}.tl::before{left:7px}.tls__dot{left:-2rem;width:16px;height:16px}.tls__dot::after{width:4px;height:4px}}
+@media(max-width:1024px){.hero{grid-template-columns:1fr;gap:2rem}.hero__l,.hero__r{padding:0 clamp(1.5rem,4vw,3.5rem)}.cube__canvas{width:250px;height:250px}.bento{grid-template-columns:repeat(6,1fr)}.bc--lg{grid-column:span 6}.bc--md{grid-column:span 3}.bc--half{grid-column:span 6}.stats{grid-template-columns:repeat(2,1fr)}.st{border-bottom:1px solid var(--w08)}.ft__g{grid-template-columns:1fr 1fr}.phil{grid-template-columns:1fr}.bransjer{grid-template-columns:repeat(3,1fr)}.deliv{grid-template-columns:repeat(2,1fr)}.pricing{grid-template-columns:1fr}.partners{grid-template-columns:repeat(2,1fr)}.blog__grid{grid-template-columns:1fr}}
+@media(max-width:768px){.nl{display:none;flex-direction:column;position:fixed;inset:0;background:rgba(5,5,5,.98);backdrop-filter:blur(30px);padding:5rem 2rem;gap:0;z-index:999}.nl.op{display:flex}.nl a{font-size:1.1rem;padding:1rem 0;border-bottom:1px solid var(--w08);color:var(--w)}.hb{display:block}.bento{grid-template-columns:1fr}.bc--lg,.bc--md,.bc--half{grid-column:span 1}.stats{grid-template-columns:1fr}.ft__g{grid-template-columns:1fr}.hero__r{display:none}.cur,.trail{display:none}body{cursor:auto}.btn,.eco__p,.hb,.fq,.bc,.tpp,.phil__item,.bransje,.deliv__col,.price__card,.partner,.blog__card{cursor:auto}.tl{padding-left:2rem}.tl::before{left:7px}.tls__dot{left:-2rem;width:16px;height:16px}.tls__dot::after{width:4px;height:4px}.bransjer{grid-template-columns:repeat(2,1fr)}.deliv{grid-template-columns:1fr}.partners{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -318,7 +387,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 
 <nav class="nav" id="nav"><div class="nv">
 <a href="/" class="logo"><div class="logo__i"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 14L10 4l7 10"/><path d="M7 10l3-4 3 4" opacity=".3"/></svg></div><span class="logo__t">webbyrå<span style="opacity:.25;font-weight:400">.no</span></span></a>
-<ul class="nl" id="nl"><li><a href="#tjenester">Tjenester</a></li><li><a href="#prosess">Prosess</a></li><li><a href="#arbeid">Prosjekter</a></li><li><a href="#oko">Økosystem</a></li><li><a href="#faq">Spørsmål</a></li><li><a href="#kontakt" class="ncta">Start prosjekt</a></li></ul>
+<ul class="nl" id="nl"><li><a href="#tjenester">Tjenester</a></li><li><a href="#prosess">Prosess</a></li><li><a href="#priser">Priser</a></li><li><a href="#oko">Økosystem</a></li><li><a href="#faq">Spørsmål</a></li><li><a href="#kontakt" class="ncta">Gratis analyse</a></li></ul>
 <button class="hb" id="hb" aria-label="Meny"><span></span><span></span><span></span></button>
 </div></nav>
 
@@ -380,19 +449,216 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <div class="tls"><div class="tls__dot"></div><div class="tls__num">04 — VEKST</div><h3 class="tls__t">Lansering & optimalisering</h3><p class="tls__d">Vi lanserer, overvåker og optimaliserer. SEO og konverteringsoptimalisering sikrer vekst over tid.</p></div></div>
 </div></section>
 
-<section class="sec" id="arbeid"><div class="ctn">
-<div class="sec__lb">Utvalgte prosjekter</div><h2 class="sec__t">Arbeid som <span class="grad">snakker</span><br>for seg selv</h2>
-<div class="wg">
-<div class="wc"><div class="wc__img"></div><div class="wc__b"><div class="wc__tag">Nettbutikk</div><h3 class="wc__t">Nordisk Interiør</h3><p class="wc__d">340% økning i organisk trafikk på 6 måneder</p></div></div>
-<div class="wc"><div class="wc__img"></div><div class="wc__b"><div class="wc__tag">Webapplikasjon</div><h3 class="wc__t">FlowMetrics</h3><p class="wc__d">Dashboard og analyseplattform fra scratch</p></div></div>
-<div class="wc"><div class="wc__img"></div><div class="wc__b"><div class="wc__tag">Bedriftsside</div><h3 class="wc__t">Advokatfirma Strand</h3><p class="wc__d">Redesign som doblet konverteringsraten</p></div></div>
-<div class="wc"><div class="wc__img"></div><div class="wc__b"><div class="wc__tag">Plattform</div><h3 class="wc__t">ByggPlan Pro</h3><p class="wc__d">Prosjektstyringsverktøy for byggbransjen</p></div></div>
-</div></div></section>
+<!-- FILOSOFI -->
+<section class="sec" id="filosofi"><div class="ctn">
+<div class="sec__hdr"><div><div class="sec__lb">Vår filosofi</div><h2 class="sec__t">Vi bygger ikke nettsider.<br>Vi bygger <span class="grad">vekstmaskiner</span></h2></div></div>
+<div class="phil">
+<div class="phil__item">
+<div class="phil__num">01</div>
+<h3 class="phil__t">Ingen maler. Bare skreddersøm.</h3>
+<p class="phil__d">Vi starter aldri med en ferdig mal. Hver nettside er designet fra bunnen av, tilpasset din merkevare, dine mål og dine brukere. Det er det som skiller godt fra eksepsjonelt.</p>
+</div>
+<div class="phil__item">
+<div class="phil__num">02</div>
+<h3 class="phil__t">Ytelse er ikke valgfritt.</h3>
+<p class="phil__d">Hvert millisekund teller. Vi bygger med perfekte Core Web Vitals, semantisk HTML og optimalisert kode som standard — ikke som et tillegg du må betale ekstra for.</p>
+</div>
+<div class="phil__item">
+<div class="phil__num">03</div>
+<h3 class="phil__t">Design med data, ikke magefølelse.</h3>
+<p class="phil__d">Vakre nettsider som ingen bruker er meningsløse. Vi kombinerer estetikk med brukerdata, varmekart og konverteringsanalyse for å lage sider som faktisk leverer resultater.</p>
+</div>
+</div>
+</div></section>
 
+<!-- BRANSJER -->
 <section class="sec" style="background:var(--bg2)"><div class="ctn">
+<div class="sec__lb">Bransjer</div>
+<h2 class="sec__t">Vi forstår <span class="grad">din bransje</span></h2>
+<p class="sec__d">Dybdekunnskap i bransjene vi jobber med gir bedre resultater — raskere.</p>
+<div class="bransjer">
+<div class="bransje">
+<div class="bransje__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+<h4>E-handel</h4><p>Nettbutikker som selger</p>
+</div>
+<div class="bransje">
+<div class="bransje__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+<h4>Advokatfirma</h4><p>Tillit og autoritet</p>
+</div>
+<div class="bransje">
+<div class="bransje__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+<h4>SaaS</h4><p>Plattformer som skalerer</p>
+</div>
+<div class="bransje">
+<div class="bransje__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+<h4>Helse</h4><p>WCAG og personvern</p>
+</div>
+<div class="bransje">
+<div class="bransje__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+<h4>Finans</h4><p>Sikkerhet og compliance</p>
+</div>
+<div class="bransje">
+<div class="bransje__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+<h4>Eiendom</h4><p>Visuelle opplevelser</p>
+</div>
+</div>
+</div></section>
+
+<!-- HVA DU FÅR LEVERT -->
+<section class="sec"><div class="ctn">
+<div class="sec__lb">Leveranser</div>
+<h2 class="sec__t">Hva du faktisk <span class="grad">får levert</span></h2>
+<p class="sec__d">Ingen skjulte kostnader. Alt inkludert i hvert prosjekt.</p>
+<div class="deliv">
+<div class="deliv__col">
+<h4 class="deliv__h">Design</h4>
+<div class="deliv__item"><span class="deliv__check">&#10003;</span> Komplett designsystem i Figma</div>
+<div class="deliv__item"><span class="deliv__check">&#10003;</span> Mobil, nettbrett og desktop</div>
+<div class="deliv__item"><span class="deliv__check">&#10003;</span> Interaktive prototyper</div>
+<div class="deliv__item"><span class="deliv__check">&#10003;</span> Brukerflyt og wireframes</div>
+</div>
+<div class="deliv__col">
+<h4 class="deliv__h">Utvikling</h4>
+<div class="deliv__item"><span class="deliv__check">&#10003;</span> Skreddersydd kode (ingen maler)</div>
+<div class="deliv__item"><span class="deliv__check">&#10003;</span> CMS for innholdsstyring</div>
+<div class="deliv__item"><span class="deliv__check">&#10003;</span> 100/100 PageSpeed-score</div>
+<div class="deliv__item"><span class="deliv__check">&#10003;</span> SSL, hosting og domene-oppsett</div>
+</div>
+<div class="deliv__col">
+<h4 class="deliv__h">SEO & vekst</h4>
+<div class="deliv__item"><span class="deliv__check">&#10003;</span> Teknisk SEO-oppsett</div>
+<div class="deliv__item"><span class="deliv__check">&#10003;</span> Schema.org strukturerte data</div>
+<div class="deliv__item"><span class="deliv__check">&#10003;</span> Google Analytics & Search Console</div>
+<div class="deliv__item"><span class="deliv__check">&#10003;</span> Sitemap og robots.txt</div>
+</div>
+<div class="deliv__col">
+<h4 class="deliv__h">Etter lansering</h4>
+<div class="deliv__item"><span class="deliv__check">&#10003;</span> 30 dager gratis support</div>
+<div class="deliv__item"><span class="deliv__check">&#10003;</span> Opplæring i CMS</div>
+<div class="deliv__item"><span class="deliv__check">&#10003;</span> Ytelsesrapport</div>
+<div class="deliv__item"><span class="deliv__check">&#10003;</span> Vedlikeholdsavtale tilgjengelig</div>
+</div>
+</div>
+</div></section>
+
+<!-- PRISPAKKER -->
+<section class="sec" id="priser" style="background:var(--bg2)"><div class="ctn">
+<div class="sec__lb">Priser</div>
+<h2 class="sec__t">Tydelige <span class="grad">prispakker</span></h2>
+<p class="sec__d">Ingen overraskelser. Velg pakken som passer din bedrift.</p>
+<div class="pricing">
+<div class="price__card">
+<div class="price__label">Starter</div>
+<div class="price__amount">fra 39.000<span> kr</span></div>
+<p class="price__desc">For nyoppstartede bedrifter og enkle bedriftssider.</p>
+<div class="price__line"></div>
+<div class="price__feat">Inntil 5 sider</div>
+<div class="price__feat">Responsivt design</div>
+<div class="price__feat">CMS (innholdsstyring)</div>
+<div class="price__feat">Grunnleggende SEO</div>
+<div class="price__feat">SSL og hosting-oppsett</div>
+<div class="price__feat">Kontaktskjema</div>
+<div class="price__feat">Google Analytics</div>
+<div class="price__time">Leveringstid: 3–5 uker</div>
+<a href="#kontakt" class="btn btn--o" style="width:100%;justify-content:center;margin-top:1.5rem">Kom i gang</a>
+</div>
+<div class="price__card price__card--pop">
+<div class="price__badge">Mest populær</div>
+<div class="price__label">Business</div>
+<div class="price__amount">fra 89.000<span> kr</span></div>
+<p class="price__desc">For etablerte bedrifter som vil vokse digitalt.</p>
+<div class="price__line"></div>
+<div class="price__feat">Inntil 15 sider</div>
+<div class="price__feat">Skreddersydd design i Figma</div>
+<div class="price__feat">Avansert CMS-oppsett</div>
+<div class="price__feat">Komplett teknisk SEO</div>
+<div class="price__feat">Schema.org & strukturerte data</div>
+<div class="price__feat">Konverteringsoptimalisering</div>
+<div class="price__feat">Integrasjoner (CRM, e-post)</div>
+<div class="price__feat">30 dager support inkludert</div>
+<div class="price__time">Leveringstid: 5–8 uker</div>
+<a href="#kontakt" class="btn btn--p" style="width:100%;justify-content:center;margin-top:1.5rem">Kom i gang</a>
+</div>
+<div class="price__card">
+<div class="price__label">Enterprise</div>
+<div class="price__amount">fra 189.000<span> kr</span></div>
+<p class="price__desc">For komplekse prosjekter, nettbutikker og webapplikasjoner.</p>
+<div class="price__line"></div>
+<div class="price__feat">Ubegrenset sider</div>
+<div class="price__feat">Custom webapplikasjon</div>
+<div class="price__feat">E-handel / nettbutikk</div>
+<div class="price__feat">API-integrasjoner</div>
+<div class="price__feat">Flerspråklig støtte</div>
+<div class="price__feat">Dedikert prosjektleder</div>
+<div class="price__feat">SLA og prioritert support</div>
+<div class="price__feat">Ytelsesgaranti</div>
+<div class="price__time">Leveringstid: 8–16 uker</div>
+<a href="#kontakt" class="btn btn--o" style="width:100%;justify-content:center;margin-top:1.5rem">Kontakt oss</a>
+</div>
+</div>
+</div></section>
+
+<!-- SERTIFISERINGER -->
+<section class="sec" style="background:var(--bg2)"><div class="ctn">
+<div class="sec__lb">Partnere & sertifiseringer</div>
+<h2 class="sec__t">Anerkjent av de <span class="grad">beste</span></h2>
+<p class="sec__d">Vi er offisielle partnere med verdens ledende teknologiplattformer.</p>
+<div class="partners">
+<div class="partner">
+<div class="partner__logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/></svg></div>
+<h4>Vercel Partner</h4>
+<p>Offisiell partner for hosting og deploy</p>
+</div>
+<div class="partner">
+<div class="partner__logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
+<h4>Shopify Expert</h4>
+<p>Sertifisert for e-handel og nettbutikk</p>
+</div>
+<div class="partner">
+<div class="partner__logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+<h4>Google Partner</h4>
+<p>Sertifisert for Analytics og Ads</p>
+</div>
+<div class="partner">
+<div class="partner__logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+<h4>Sanity Partner</h4>
+<p>Offisiell partner for headless CMS</p>
+</div>
+</div>
+</div></section>
+
+<!-- TEKNOLOGI -->
+<section class="sec"><div class="ctn">
 <div class="sec__lb">Teknologi</div><h2 class="sec__t">Teknologien bak <span class="grad">veksten</span></h2>
 <div class="tp"><span class="tpp">Next.js</span><span class="tpp">React</span><span class="tpp">TypeScript</span><span class="tpp">Tailwind CSS</span><span class="tpp">Node.js</span><span class="tpp">Sanity CMS</span><span class="tpp">Shopify</span><span class="tpp">WordPress</span><span class="tpp">Vercel</span><span class="tpp">PostgreSQL</span><span class="tpp">Prisma</span><span class="tpp">Figma</span><span class="tpp">Framer Motion</span><span class="tpp">Stripe</span><span class="tpp">GraphQL</span><span class="tpp">Docker</span></div>
 <div class="testi"><div class="testi__q">"</div><p class="testi__txt">Webbyrå.no forstod visjonen vår fra dag én. De leverte ikke bare en vakker nettside — de leverte en vekstmaskin som har tredoblet konverteringene våre på seks måneder.</p><div class="testi__a"><div class="testi__av">ML</div><div class="testi__inf"><strong>Marte Lindgren</strong>Daglig leder, Nordisk Interiør</div></div></div>
+</div></section>
+
+<!-- BLOGG / INNSIKT -->
+<section class="sec" style="background:var(--bg2)"><div class="ctn">
+<div class="sec__lb">Innsikt</div>
+<h2 class="sec__t">Fra <span class="grad">bloggen</span></h2>
+<p class="sec__d">Vi deler det vi lærer. Artikler om webdesign, utvikling, SEO og digital strategi.</p>
+<div class="blog__grid">
+<a href="#" class="blog__card">
+<div class="blog__meta">SEO &middot; 8 min lesing</div>
+<h3 class="blog__t">Teknisk SEO-sjekkliste for 2026: Alt du må ha på plass</h3>
+<p class="blog__d">Core Web Vitals, strukturerte data og hastighetsoptimalisering — en komplett guide.</p>
+<span class="blog__link">Les artikkelen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+</a>
+<a href="#" class="blog__card">
+<div class="blog__meta">Webdesign &middot; 6 min lesing</div>
+<h3 class="blog__t">Hvorfor bedriften din trenger en nettside i 2026 (og hva den bør koste)</h3>
+<p class="blog__d">En ærlig oversikt over priser, tidslinje og hva du faktisk bør forvente.</p>
+<span class="blog__link">Les artikkelen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+</a>
+<a href="#" class="blog__card">
+<div class="blog__meta">Konvertering &middot; 5 min lesing</div>
+<h3 class="blog__t">5 grunner til at nettsiden din ikke konverterer (og hvordan du fikser det)</h3>
+<p class="blog__d">De vanligste feilene vi ser — og enkle grep som gir umiddelbar effekt.</p>
+<span class="blog__link">Les artikkelen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+</a>
+</div>
 </div></section>
 
 <section class="sec eco" id="oko"><div class="ctn">
@@ -413,9 +679,9 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 </div></div></section>
 
 <section class="cta" id="kontakt"><div class="ctn">
-<h2 class="cta__t">Klar for en nettside<br>som faktisk <span class="grad">leverer?</span></h2>
-<p class="cta__d">Fortell oss om prosjektet ditt. Vi svarer innen 24 timer med uforpliktende vurdering og prisestimat.</p>
-<a href="/cdn-cgi/l/email-protection#056d606c45726067677c77c6a02b6b6a" class="btn btn--w">Start samtalen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+<h2 class="cta__t">Få en gratis<br><span class="grad">nettside-analyse</span></h2>
+<p class="cta__d">Vi analyserer nettsiden din og gir deg en konkret rapport med forbedringspunkter innen design, hastighet, SEO og konvertering — helt gratis og uforpliktende.</p>
+<a href="mailto:hei@xn--webbyr-fua.no" class="btn btn--w">Bestill gratis analyse <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
 </div></section>
 
 <footer class="ft"><div class="ctn">
@@ -554,7 +820,7 @@ var obs=new IntersectionObserver(function(entries){
   });
 },{threshold:.1,rootMargin:'0px 0px -25px 0px'});
 
-document.querySelectorAll('.bc,.tls,.wc,.testi,.tpp,.eco__p,.fi,.st').forEach(function(el,i){
+document.querySelectorAll('.bc,.tls,.testi,.tpp,.eco__p,.fi,.st,.phil__item,.bransje,.deliv__col,.price__card,.partner,.blog__card').forEach(function(el,i){
   el.style.opacity='0';
   el.style.transform='translateY(30px)';
   el.dataset.delay=(i%8)*.06+'s';
