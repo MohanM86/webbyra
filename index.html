@@ -885,6 +885,8 @@ if(hb){hb.addEventListener('click',function(){hb.classList.toggle('o');nl.classL
 if(nl){nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nl.classList.remove('op');hb.classList.remove('o')})})}
 
 // === PARTICLES ===
+var mx=-999,my=-999;
+document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY});
 var cv=document.getElementById('pc'),ctx=cv?cv.getContext('2d'):null;
 var W=0,H=0;
 function rz(){if(cv){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight}}
@@ -893,7 +895,7 @@ var pts=[];
 function Pt(){
   this.x=Math.random()*W;this.y=Math.random()*H;
   this.vx=(Math.random()-.5)*.2;this.vy=(Math.random()-.5)*.2;
-  this.r=Math.random()*1.8+.5;this.a=Math.random()*.15+.05;
+  this.r=Math.random()*2.2+.6;this.a=Math.random()*.25+.08;
 }
 Pt.prototype.update=function(){
   this.x+=this.vx;this.y+=this.vy;
@@ -919,7 +921,7 @@ function ap(){
       var dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);
       if(d<120){
         ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);
-        ctx.strokeStyle='rgba(255,20,147,'+(0.06*(1-d/120))+')';ctx.lineWidth=.6;ctx.stroke();
+        ctx.strokeStyle='rgba(255,20,147,'+(0.1*(1-d/120))+')';ctx.lineWidth=.7;ctx.stroke();
       }
     }
   }
@@ -1072,7 +1074,7 @@ document.querySelectorAll('.fq').forEach(function(q){
     var glowSize=200+Math.sin(pulse)*30;
     var grd=cx2.createRadialGradient(cw/2,ch/2,0,cw/2,ch/2,glowSize);
     grd.addColorStop(0,'rgba(0,229,160,0.04)');
-    grd.addColorStop(0.5,'rgba(255,20,147,0.02)');
+    grd.addColorStop(0.5,'rgba(0,229,160,0.02)');
     grd.addColorStop(1,'transparent');
     cx2.fillStyle=grd;
     cx2.fillRect(0,0,cw,ch);
@@ -1100,7 +1102,7 @@ document.querySelectorAll('.fq').forEach(function(q){
       var bri=sp.brightness*(0.5+0.5*Math.sin(pulse*3+sp.phase));
       cx2.beginPath();
       cx2.arc(proj[0],proj[1],sp.size*proj[2],0,Math.PI*2);
-      cx2.fillStyle='rgba('+(Math.random()>0.5?'255,20,147':'0,229,160')+','+bri*0.6+')';
+      cx2.fillStyle='rgba(0,229,160,'+bri*0.6+')';
       cx2.fill();
       // Spark glow
       cx2.beginPath();
@@ -1158,7 +1160,7 @@ document.querySelectorAll('.fq').forEach(function(q){
       // Mid glow
       cx2.beginPath();
       cx2.moveTo(a[0],a[1]);cx2.lineTo(b[0],b[1]);
-      cx2.strokeStyle='rgba(255,20,147,'+(edgeAlpha*0.5)+')';
+      cx2.strokeStyle='rgba(0,229,160,'+(edgeAlpha*0.5)+')';
       cx2.lineWidth=3*avgScale;cx2.stroke();
 
       // Core line
@@ -1196,6 +1198,12 @@ document.querySelectorAll('.fq').forEach(function(q){
       cx2.beginPath();
       cx2.arc(v[0],v[1],5*v[2],0,Math.PI*2);
       cx2.fillStyle='rgba(0,229,160,'+(0.15*vPulse)+')';
+      cx2.fill();
+
+      // Core dot
+      cx2.beginPath();
+      cx2.arc(v[0],v[1],2.5*v[2],0,Math.PI*2);
+      cx2.fillStyle='rgba(0,229,160,'+(0.5+0.3*vPulse)+')';
       cx2.fill();
 
       // Core dot
