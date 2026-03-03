@@ -376,13 +376,28 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 .by{padding:.45rem 1rem;border:1px solid var(--w08);border-radius:100px;font-size:.72rem;font-weight:500;color:var(--w50);text-decoration:none;transition:all .3s var(--ease);white-space:nowrap}
 .by:hover{border-color:rgba(0,229,160,.2);color:var(--c1);background:rgba(0,229,160,.03);transform:translateY(-1px)}
 
-/* WAVE CTA */
-.wave-cta{position:relative;overflow:hidden;padding:0;background:var(--bg)}
-.wave-cta__canvas{display:block;width:100%;height:600px}
-.wave-cta__content{position:absolute;top:0;left:0;right:0;height:600px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;z-index:2;text-align:center;padding:5rem 2rem 0}
-.wave-cta__t{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.05em;line-height:.95;margin-bottom:.8rem}
-.wave-cta__t .grad{background:var(--g1);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.wave-cta__d{font-size:.88rem;color:var(--w50);margin-bottom:1.5rem;max-width:500px}
+/* AURORA CTA */
+/* AURORA CTA */
+.aurora-cta{position:relative;overflow:hidden;min-height:600px;background:#050505;display:flex;align-items:center;justify-content:center;flex-direction:column}
+.orb{position:absolute;border-radius:50%;filter:blur(100px)}
+.orb-1{width:600px;height:400px;background:rgba(0,229,160,.25);top:20%;left:5%;animation:orbMove1 8s ease-in-out infinite}
+.orb-2{width:500px;height:300px;background:rgba(0,179,119,.2);bottom:10%;right:5%;animation:orbMove2 10s ease-in-out infinite}
+.orb-3{width:400px;height:400px;background:rgba(0,229,160,.15);top:40%;left:40%;animation:orbMove3 12s ease-in-out infinite}
+@keyframes orbMove1{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,-40px)}}
+@keyframes orbMove2{0%,100%{transform:translate(0,0)}50%{transform:translate(-50px,30px)}}
+@keyframes orbMove3{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-30px,-20px) scale(1.15)}}
+.streak{position:absolute;height:2px;background:linear-gradient(90deg,transparent 0%,rgba(0,229,160,.5) 30%,rgba(0,229,160,.5) 70%,transparent 100%);animation:streakMove 5s ease-in-out infinite}
+.streak-1{width:60%;top:45%;left:-60%;animation-duration:5s}
+.streak-2{width:70%;top:55%;left:-70%;animation-duration:7s;animation-delay:1s}
+.streak-3{width:50%;top:65%;left:-50%;animation-duration:6s;animation-delay:2s}
+.streak-4{width:80%;top:50%;left:-80%;animation-duration:8s;animation-delay:0.5s}
+.streak-5{width:40%;top:60%;left:-40%;animation-duration:4.5s;animation-delay:3s}
+@keyframes streakMove{0%{transform:translateX(0)}100%{transform:translateX(calc(100vw + 100%))}}
+.grid-overlay{position:absolute;inset:0;background-image:linear-gradient(rgba(0,229,160,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,229,160,.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 60% 50% at 50% 55%,black,transparent);-webkit-mask-image:radial-gradient(ellipse 60% 50% at 50% 55%,black,transparent)}
+.cta-content{position:relative;z-index:2;text-align:center;padding:0 2rem}
+.cta-content h2{font-family:var(--display);font-weight:800;font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-.05em;line-height:.92;margin-bottom:1rem}
+.cta-content h2 .grad{background:var(--g1);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.cta-content p{font-size:.92rem;color:var(--w50);margin-bottom:2rem;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.8}
 
 /* SEXY FOOTER */
 .ft2{background:linear-gradient(180deg,var(--bg) 0%,#070a08 100%);border-top:1px solid rgba(0,229,160,.08);padding:4rem 0 0;position:relative;z-index:1}
@@ -779,13 +794,21 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 </div></div></section>
 
 <!-- WAVE CTA + FOOTER -->
-<section class="wave-cta" id="kontakt">
-<canvas id="waveCtaCanvas" class="wave-cta__canvas"></canvas>
-<div class="wave-cta__content">
-<h2 class="wave-cta__t">Klar for en digital<br><span class="grad">partner?</span></h2>
-<p class="wave-cta__d">Vi tar oss av alt — design, utvikling, drift og vekst. Du fokuserer på bedriften, vi leverer resultatene.</p>
-<a href="/cdn-cgi/l/email-protection#b0d8d5d9f0c7d5d2d2c9c2d1d19ededf" class="btn btn--w">Snakk med oss <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-</div>
+<section class="aurora-cta" id="kontakt">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+  <div class="grid-overlay"></div>
+  <div class="streak streak-1"></div>
+  <div class="streak streak-2"></div>
+  <div class="streak streak-3"></div>
+  <div class="streak streak-4"></div>
+  <div class="streak streak-5"></div>
+  <div class="cta-content">
+    <h2>Klar for en digital<br><span class="grad">partner?</span></h2>
+    <p>Vi tar oss av alt — design, utvikling, drift og vekst. Du fokuserer på bedriften, vi leverer resultatene.</p>
+    <a href="mailto:hei@webbyraa.no" class="btn btn--w">Snakk med oss <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+  </div>
 </section>
 
 <footer class="ft2">
@@ -815,7 +838,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 </div>
 <div class="ft2__col">
 <h4>Kontakt</h4>
-<a href="/cdn-cgi/l/email-protection#432b262a03342621213a3122226d2d2c">hei@webbyrå.no</a>
+<a href="mailto:hei@webbyraa.no">hei@webbyrå.no</a>
 <a href="/#faq">Vanlige spørsmål</a>
 <a href="/#byer">Byer vi betjener</a>
 <a href="/sitemap.xml">Sidekart</a>
@@ -832,7 +855,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 </div>
 </div>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // === CURSOR + TRAIL ===
 const cur=document.getElementById('cur'),t1=document.getElementById('t1'),t2=document.getElementById('t2'),t3=document.getElementById('t3');
 let cx=0,cy=0,mx=0,my=0,trails=[[0,0],[0,0],[0,0]];
@@ -1187,7 +1210,6 @@ document.querySelectorAll('.fq').forEach(function(q){
       cx2.arc(v[0],v[1],5*v[2],0,Math.PI*2);
       cx2.fillStyle='rgba(0,229,160,'+(0.15*vPulse)+')';
       cx2.fill();
-
       // Core dot
       cx2.beginPath();
       cx2.arc(v[0],v[1],2.5*v[2],0,Math.PI*2);
@@ -1200,91 +1222,5 @@ document.querySelectorAll('.fq').forEach(function(q){
   draw();
 })();
 </script>
-<script>
-// === WAVE CTA CANVAS ===
-(function(){
-  var wc=document.getElementById('waveCtaCanvas');
-  if(!wc)return;
-  var wx=wc.getContext('2d');
-  var W,H,dpr=Math.min(window.devicePixelRatio||1,2);
-  function rs(){
-    var r=wc.parentElement.getBoundingClientRect();
-    W=r.width;H=r.height;
-    wc.width=W*dpr;wc.height=H*dpr;
-    wx.scale(dpr,dpr);
-  }
-  rs();window.addEventListener('resize',rs);
-  
-  var waves=[
-    {y:.65,amp:40,freq:.003,speed:.0012,dots:160,r:2.0,op:.35,ph:0},
-    {y:.70,amp:50,freq:.0025,speed:.0009,dots:140,r:1.8,op:.28,ph:1.5},
-    {y:.75,amp:35,freq:.004,speed:.0015,dots:130,r:1.5,op:.22,ph:3},
-    {y:.60,amp:45,freq:.0035,speed:.001,dots:120,r:1.6,op:.25,ph:4.5},
-    {y:.80,amp:30,freq:.005,speed:.0018,dots:110,r:1.3,op:.18,ph:2},
-    {y:.68,amp:55,freq:.002,speed:.0007,dots:150,r:2.2,op:.30,ph:5.5},
-    {y:.72,amp:25,freq:.006,speed:.002,dots:100,r:1.1,op:.15,ph:1},
-    {y:.62,amp:38,freq:.0045,speed:.0013,dots:115,r:1.4,op:.20,ph:3.5},
-  ];
-  var t=0;
-  function draw(){
-    t++;
-    wx.clearRect(0,0,W,H);
-    
-    // Central glow
-    var gx=W/2,gy=H*0.68;
-    var pulse=0.5+0.5*Math.sin(t*0.002);
-    var g=wx.createRadialGradient(gx,gy,0,gx,gy,300+pulse*50);
-    g.addColorStop(0,'rgba(0,229,160,'+(0.06+pulse*0.03)+')');
-    g.addColorStop(0.4,'rgba(0,179,119,'+(0.02+pulse*0.01)+')');
-    g.addColorStop(1,'rgba(0,229,160,0)');
-    wx.fillStyle=g;
-    wx.fillRect(0,0,W,H);
-    
-    for(var w=0;w<waves.length;w++){
-      var wv=waves[w];
-      var baseY=wv.y*H;
-      
-      // Draw dotted line
-      wx.beginPath();
-      for(var i=0;i<wv.dots;i++){
-        var px=(i/(wv.dots-1))*W*1.2-W*0.1;
-        var n1=Math.sin(px*wv.freq+t*wv.speed+wv.ph)*wv.amp;
-        var n2=Math.sin(px*wv.freq*2.3+t*wv.speed*0.6+wv.ph*1.7)*wv.amp*0.25;
-        var n3=Math.sin(px*wv.freq*0.5+t*wv.speed*1.3)*wv.amp*0.15;
-        var py=baseY+n1+n2+n3;
-        
-        // Edge fade
-        var nx=px/W;
-        var fade=1;
-        if(nx<0.08)fade=nx/0.08;
-        if(nx>0.92)fade=(1-nx)/0.08;
-        fade=Math.max(0,Math.min(1,fade));
-        
-        // Center brightening
-        var centerDist=Math.abs(nx-0.5)*2;
-        var centerBoost=1+0.5*(1-centerDist*centerDist);
-        
-        var dp=0.7+0.3*Math.sin(t*0.004+i*0.15+w*0.8);
-        var alpha=wv.op*fade*dp*centerBoost;
-        
-        // Outer glow
-        wx.beginPath();
-        wx.arc(px,py,wv.r*4,0,Math.PI*2);
-        wx.fillStyle='rgba(0,229,160,'+(alpha*0.1)+')';
-        wx.fill();
-        
-        // Mid glow
-        wx.beginPath();
-        wx.arc(px,py,wv.r*2,0,Math.PI*2);
-        wx.fillStyle='rgba(0,229,160,'+(alpha*0.25)+')';
-        wx.fill();
-        
-        // Core
-        wx.beginPath();
-        wx.arc(px,py,wv.r,0,Math.PI*2);
-        wx.fillStyle='rgba(0,229,160,'+alpha+')';
-        wx.fill();
-        
-        // Hot center
-        wx.beginPath();
-        wx.arc(px,py,wv.r*0.35,
+</body>
+</html>
