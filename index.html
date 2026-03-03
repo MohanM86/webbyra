@@ -160,10 +160,10 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 .ctn{max-width:1400px;margin:0 auto;padding:0 clamp(1.5rem,4vw,3.5rem)}
 
 /* HERO */
-.hero{z-index:1;min-height:100vh;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;position:relative;overflow:hidden;padding:8rem 0 5rem;gap:3rem}
+.hero{z-index:1;min-height:100vh;display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;position:relative;overflow:hidden;padding:8rem 0 5rem;gap:2rem}
 #pc{position:absolute;inset:0;z-index:1}
-.hero__l{position:relative;z-index:2;padding-left:clamp(1.5rem,4vw,3.5rem)}
-.hero__r{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;padding-right:clamp(1.5rem,4vw,3.5rem)}
+.hero__l{position:relative;z-index:2;padding-right:clamp(1.5rem,4vw,3.5rem)}
+.hero__r{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;padding-left:clamp(1.5rem,4vw,3.5rem)}
 .hero__ey{font-family:var(--mono);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:var(--c1);margin-bottom:2rem;display:flex;align-items:center;gap:.6rem;animation:fadeUp .7s var(--ease) .1s both}
 .hero__ey .dot{width:6px;height:6px;border-radius:50%;background:var(--c1);animation:pulse 2s infinite;box-shadow:0 0 12px rgba(0,229,160,.5)}
 .hero__h{font-family:var(--display);font-weight:800;font-size:clamp(3rem,5.5vw,5rem);line-height:.9;letter-spacing:-.06em;margin-bottom:2rem}
@@ -177,7 +177,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 
 /* 3D CUBE */
 /* CUBE CANVAS */
-.cube__canvas{width:400px;height:400px;animation:fadeUp 1s var(--ease) .5s both;position:relative}
+.cube__canvas{width:520px;height:520px;animation:fadeUp 1s var(--ease) .5s both;position:relative}
 #cubeCanvas{width:100%;height:100%}
 
 /* BUTTONS */
@@ -402,7 +402,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 @keyframes ftpulse{0%,100%{opacity:.4}50%{opacity:1;box-shadow:0 0 8px rgba(0,229,160,.3)}}
 
 /* RESPONSIVE */
-@media(max-width:1024px){.hero{z-index:1;grid-template-columns:1fr;gap:2rem}.hero__l,.hero__r{padding:0 clamp(1.5rem,4vw,3.5rem)}.cube__canvas{width:250px;height:250px}.bento{grid-template-columns:repeat(6,1fr)}.bc--lg{grid-column:span 6}.bc--md{grid-column:span 3}.bc--half{grid-column:span 6}.stats{grid-template-columns:repeat(2,1fr)}.st{border-bottom:1px solid var(--w08)}.phil{grid-template-columns:1fr}.bransjer{grid-template-columns:repeat(3,1fr)}.deliv{grid-template-columns:repeat(2,1fr)}.pricing{grid-template-columns:1fr}.partners{grid-template-columns:repeat(2,1fr)}.blog__grid{grid-template-columns:1fr}}
+@media(max-width:1024px){.hero{z-index:1;grid-template-columns:1fr;gap:2rem}.hero__l,.hero__r{padding:0 clamp(1.5rem,4vw,3.5rem)}.cube__canvas{width:320px;height:320px}.bento{grid-template-columns:repeat(6,1fr)}.bc--lg{grid-column:span 6}.bc--md{grid-column:span 3}.bc--half{grid-column:span 6}.stats{grid-template-columns:repeat(2,1fr)}.st{border-bottom:1px solid var(--w08)}.phil{grid-template-columns:1fr}.bransjer{grid-template-columns:repeat(3,1fr)}.deliv{grid-template-columns:repeat(2,1fr)}.pricing{grid-template-columns:1fr}.partners{grid-template-columns:repeat(2,1fr)}.blog__grid{grid-template-columns:1fr}}
 @media(max-width:768px){.nl{display:none;flex-direction:column;position:fixed;inset:0;background:rgba(5,5,5,.98);backdrop-filter:blur(30px);padding:5rem 2rem;gap:0;z-index:999}.nl.op{display:flex}.nl a{font-size:1.1rem;padding:1rem 0;border-bottom:1px solid var(--w08);color:var(--w)}.hb{display:block}.bento{grid-template-columns:1fr}.bc--lg,.bc--md,.bc--half{grid-column:span 1}.stats{grid-template-columns:1fr}.hero__r{display:none}.cur,.trail{display:none}body{cursor:auto}.btn,.eco__p,.hb,.fq,.bc,.tpp,.phil__item,.bransje,.deliv__col,.price__card,.partner,.blog__card{cursor:auto}.tl{padding-left:2rem}.tl::before{left:7px}.tls__dot{left:-2rem;width:16px;height:16px}.tls__dot::after{width:4px;height:4px}.bransjer{grid-template-columns:repeat(2,1fr)}.deliv{grid-template-columns:1fr}.partners{grid-template-columns:1fr}.ft2__grid{grid-template-columns:1fr}.ft2__bottom{flex-direction:column;text-align:center}.ft2__links{justify-content:center}}
 </style>
 </head>
@@ -427,6 +427,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 
 <section class="hero">
 <canvas id="pc"></canvas>
+<div class="hero__r"><div class="cube__canvas"><canvas id="cubeCanvas" width="800" height="800"></canvas></div></div>
 <div class="hero__l">
 <div class="hero__ey"><span class="dot"></span> Norges fremste webbyrå</div>
 <h1 class="hero__h"><span class="ln"><span class="gl">Vi bygger</span></span><span class="ln"><span class="grad">digitale opplevelser</span></span><span class="ln">som vokser</span></h1>
@@ -436,7 +437,6 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <a href="#priser" class="btn btn--o">Se priser</a>
 </div>
 </div>
-<div class="hero__r"><div class="cube__canvas"><canvas id="cubeCanvas" width="800" height="800"></canvas></div></div>
 </section>
 
 <div class="bmq"><div class="bmq__t">
@@ -784,7 +784,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <div class="wave-cta__content">
 <h2 class="wave-cta__t">Klar for en digital<br><span class="grad">partner?</span></h2>
 <p class="wave-cta__d">Vi tar oss av alt — design, utvikling, drift og vekst. Du fokuserer på bedriften, vi leverer resultatene.</p>
-<a href="/cdn-cgi/l/email-protection#b4dcd1ddf4ccda9999c3d1d6d6cdc699d2c1d59adadb" class="btn btn--w">Snakk med oss <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+<a href="mailto:hei@webbyraa.no" class="btn btn--w">Snakk med oss <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
 </div>
 </section>
 
@@ -815,7 +815,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 </div>
 <div class="ft2__col">
 <h4>Kontakt</h4>
-<a href="/cdn-cgi/l/email-protection#6c0409052c140241411b090e0e151e410a190d420203">hei@webbyrå.no</a>
+<a href="mailto:hei@webbyraa.no">hei@webbyrå.no</a>
 <a href="/#faq">Vanlige spørsmål</a>
 <a href="/#byer">Byer vi betjener</a>
 <a href="/sitemap.xml">Sidekart</a>
@@ -832,7 +832,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 </div>
 </div>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // === CURSOR + TRAIL ===
 const cur=document.getElementById('cur'),t1=document.getElementById('t1'),t2=document.getElementById('t2'),t3=document.getElementById('t3');
 let cx=0,cy=0,mx=0,my=0,trails=[[0,0],[0,0],[0,0]];
@@ -1012,7 +1012,7 @@ document.querySelectorAll('.fq').forEach(function(q){
   });
   cc.addEventListener('mouseleave',function(){hovered=false});
 
-  var s=140; // cube half-size
+  var s=170; // cube half-size
   // 8 vertices of cube
   var verts=[
     [-s,-s,-s],[s,-s,-s],[s,s,-s],[-s,s,-s],
@@ -1062,7 +1062,7 @@ document.querySelectorAll('.fq').forEach(function(q){
     var glowSize=200+Math.sin(pulse)*30;
     var grd=cx2.createRadialGradient(cw/2,ch/2,0,cw/2,ch/2,glowSize);
     grd.addColorStop(0,'rgba(0,229,160,0.04)');
-    grd.addColorStop(0.5,'rgba(0,136,255,0.015)');
+    grd.addColorStop(0.5,'rgba(0,229,160,0.015)');
     grd.addColorStop(1,'transparent');
     cx2.fillStyle=grd;
     cx2.fillRect(0,0,cw,ch);
@@ -1113,7 +1113,7 @@ document.querySelectorAll('.fq').forEach(function(q){
       cx2.moveTo(tv[face.verts[0]][0],tv[face.verts[0]][1]);
       for(var j=1;j<face.verts.length;j++) cx2.lineTo(tv[face.verts[j]][0],tv[face.verts[j]][1]);
       cx2.closePath();
-      cx2.fillStyle='rgba(0,180,255,'+faceAlpha+')';
+      cx2.fillStyle='rgba(0,229,160,'+faceAlpha+')';
       cx2.fill();
 
       // Face label
@@ -1148,7 +1148,7 @@ document.querySelectorAll('.fq').forEach(function(q){
       // Mid glow
       cx2.beginPath();
       cx2.moveTo(a[0],a[1]);cx2.lineTo(b[0],b[1]);
-      cx2.strokeStyle='rgba(0,200,255,'+(edgeAlpha*0.5)+')';
+      cx2.strokeStyle='rgba(0,229,160,'+(edgeAlpha*0.5)+')';
       cx2.lineWidth=3*avgScale;cx2.stroke();
 
       // Core line
@@ -1163,7 +1163,7 @@ document.querySelectorAll('.fq').forEach(function(q){
       var ly=a[1]+(b[1]-a[1])*t;
       cx2.beginPath();
       cx2.arc(lx,ly,3*avgScale,0,Math.PI*2);
-      cx2.fillStyle='rgba(0,240,255,'+(0.4+0.3*Math.sin(pulse*4+i))+')';
+      cx2.fillStyle='rgba(0,255,200,'+(0.4+0.3*Math.sin(pulse*4+i))+')';
       cx2.fill();
       cx2.beginPath();
       cx2.arc(lx,ly,8*avgScale,0,Math.PI*2);
@@ -1199,6 +1199,7 @@ document.querySelectorAll('.fq').forEach(function(q){
   }
   draw();
 })();
+</script>
 <script>
 // === WAVE CTA CANVAS ===
 (function(){
