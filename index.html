@@ -291,8 +291,15 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 
 /* TECH */
 .tp{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:2rem}
-.tpp{padding:.4rem 1rem;border-radius:100px;border:1px solid var(--w08);font-size:.68rem;color:var(--w30);transition:all .3s;font-weight:500}
-.tpp:hover{border-color:var(--c1);color:var(--c1);background:rgba(0,229,160,.02)}
+.tp{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:1rem;margin-top:2.5rem}
+.tpp{padding:1.4rem 1rem;border-radius:14px;border:1px solid var(--w08);font-size:.78rem;color:var(--w40);transition:all .5s var(--ease);font-weight:600;font-family:var(--mono);display:flex;flex-direction:column;align-items:center;gap:.8rem;background:var(--card);position:relative;overflow:hidden;text-align:center}
+.tpp::before{content:'';position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(0,229,160,.5),rgba(122,122,201,.3),rgba(255,20,147,.5));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .5s var(--ease);pointer-events:none;z-index:1}
+.tpp:hover{border-color:transparent;transform:translateY(-5px);box-shadow:0 16px 50px rgba(0,0,0,.3),0 0 30px rgba(0,229,160,.05)}
+.tpp:hover::before{opacity:1}
+.tpp:hover .tpp__ico{transform:scale(1.15)}
+.tpp__ico{width:36px;height:36px;border-radius:10px;background:var(--w04);display:flex;align-items:center;justify-content:center;transition:all .5s var(--ease);font-size:.8rem;font-weight:800;color:var(--c1);font-family:var(--display)}
+.tpp__ico--p{color:var(--c2)}
+
 
 /* TESTIMONIAL */
 .testi{border:1px solid var(--w08);border-radius:16px;padding:2.5rem;margin-top:3rem;position:relative;overflow:hidden;background:var(--card)}
@@ -713,7 +720,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <!-- TEKNOLOGI --><!-- TEKNOLOGI -->
 <section class="sec"><div class="ctn">
 <div class="sec__lb">Teknologi</div><h2 class="sec__t">Teknologien bak <span class="grad">veksten</span></h2>
-<div class="tp"><span class="tpp">Next.js</span><span class="tpp">React</span><span class="tpp">TypeScript</span><span class="tpp">Tailwind CSS</span><span class="tpp">Node.js</span><span class="tpp">Sanity CMS</span><span class="tpp">Shopify</span><span class="tpp">WordPress</span><span class="tpp">Vercel</span><span class="tpp">PostgreSQL</span><span class="tpp">Prisma</span><span class="tpp">Figma</span><span class="tpp">Framer Motion</span><span class="tpp">Stripe</span><span class="tpp">GraphQL</span><span class="tpp">Docker</span></div>
+<div class="tp"><div class="tpp"><div class="tpp__ico">N</div>Next.js</div><div class="tpp"><div class="tpp__ico tpp__ico--p">Re</div>React</div><div class="tpp"><div class="tpp__ico">TS</div>TypeScript</div><div class="tpp"><div class="tpp__ico tpp__ico--p">Tw</div>Tailwind</div><div class="tpp"><div class="tpp__ico">No</div>Node.js</div><div class="tpp"><div class="tpp__ico tpp__ico--p">Sa</div>Sanity</div><div class="tpp"><div class="tpp__ico">Sh</div>Shopify</div><div class="tpp"><div class="tpp__ico tpp__ico--p">WP</div>WordPress</div><div class="tpp"><div class="tpp__ico">Ve</div>Vercel</div><div class="tpp"><div class="tpp__ico tpp__ico--p">PG</div>PostgreSQL</div><div class="tpp"><div class="tpp__ico">Pr</div>Prisma</div><div class="tpp"><div class="tpp__ico tpp__ico--p">Fi</div>Figma</div><div class="tpp"><div class="tpp__ico">FM</div>Framer</div><div class="tpp"><div class="tpp__ico tpp__ico--p">St</div>Stripe</div><div class="tpp"><div class="tpp__ico">GQ</div>GraphQL</div><div class="tpp"><div class="tpp__ico tpp__ico--p">Do</div>Docker</div></div>
 <div class="testi gb" style="background:linear-gradient(135deg,rgba(0,229,160,.03),var(--card))"><div class="testi__q" style="opacity:.04;font-size:8rem;top:-1rem">&#8734;</div><p class="testi__txt" style="font-size:clamp(1.1rem,1.4vw,1.25rem);max-width:700px">Vi tror ikke på engangsleveranser. Vi tror på partnerskap. Derfor drifter vi alt. design, kode, hosting, sikkerhet og vekst. på en fast månedlig avtale. Du eier resultatet. Vi eier ansvaret.</p><div class="testi__a" style="margin-top:1.5rem"><div style="display:flex;gap:2rem;flex-wrap:wrap"><div><div style="font-family:var(--display);font-weight:800;font-size:1.5rem;color:var(--c1)">Alt inkludert</div><div style="font-size:.68rem;color:var(--w30)">En månedspris. Ingen overraskelser.</div></div><div><div style="font-family:var(--display);font-weight:800;font-size:1.5rem">Fra A til Å</div><div style="font-size:.68rem;color:var(--w30)">Design, utvikling, drift og vekst.</div></div><div><div style="font-family:var(--display);font-weight:800;font-size:1.5rem">Ditt team</div><div style="font-size:.68rem;color:var(--w30)">Dedikerte eksperter som kjenner deg.</div></div></div></div></div>
 </div></section>
 
