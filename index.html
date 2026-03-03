@@ -378,8 +378,8 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 
 /* WAVE CTA */
 .wave-cta{position:relative;overflow:hidden;padding:0;background:var(--bg)}
-.wave-cta__canvas{display:block;width:100%;height:350px}
-.wave-cta__content{position:absolute;top:0;left:0;right:0;height:350px;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;text-align:center;padding:0 2rem}
+.wave-cta__canvas{display:block;width:100%;height:600px}
+.wave-cta__content{position:absolute;top:0;left:0;right:0;height:600px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;z-index:2;text-align:center;padding:5rem 2rem 0}
 .wave-cta__t{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.05em;line-height:.95;margin-bottom:.8rem}
 .wave-cta__t .grad{background:var(--g1);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .wave-cta__d{font-size:.88rem;color:var(--w50);margin-bottom:1.5rem;max-width:500px}
@@ -784,7 +784,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <div class="wave-cta__content">
 <h2 class="wave-cta__t">Klar for en digital<br><span class="grad">partner?</span></h2>
 <p class="wave-cta__d">Vi tar oss av alt — design, utvikling, drift og vekst. Du fokuserer på bedriften, vi leverer resultatene.</p>
-<a href="mailto:hei@webbyraa.no" class="btn btn--w">Snakk med oss <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+<a href="/cdn-cgi/l/email-protection#b0d8d5d9f0c7d5d2d2c9c2d1d19ededf" class="btn btn--w">Snakk med oss <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
 </div>
 </section>
 
@@ -815,7 +815,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 </div>
 <div class="ft2__col">
 <h4>Kontakt</h4>
-<a href="mailto:hei@webbyraa.no">hei@webbyrå.no</a>
+<a href="/cdn-cgi/l/email-protection#432b262a03342621213a3122226d2d2c">hei@webbyrå.no</a>
 <a href="/#faq">Vanlige spørsmål</a>
 <a href="/#byer">Byer vi betjener</a>
 <a href="/sitemap.xml">Sidekart</a>
@@ -832,7 +832,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 </div>
 </div>
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // === CURSOR + TRAIL ===
 const cur=document.getElementById('cur'),t1=document.getElementById('t1'),t2=document.getElementById('t2'),t3=document.getElementById('t3');
 let cx=0,cy=0,mx=0,my=0,trails=[[0,0],[0,0],[0,0]];
@@ -1216,14 +1216,14 @@ document.querySelectorAll('.fq').forEach(function(q){
   rs();window.addEventListener('resize',rs);
   
   var waves=[
-    {y:.45,amp:40,freq:.003,speed:.0012,dots:160,r:2.0,op:.35,ph:0},
-    {y:.50,amp:50,freq:.0025,speed:.0009,dots:140,r:1.8,op:.28,ph:1.5},
-    {y:.55,amp:35,freq:.004,speed:.0015,dots:130,r:1.5,op:.22,ph:3},
-    {y:.40,amp:45,freq:.0035,speed:.001,dots:120,r:1.6,op:.25,ph:4.5},
-    {y:.60,amp:30,freq:.005,speed:.0018,dots:110,r:1.3,op:.18,ph:2},
-    {y:.48,amp:55,freq:.002,speed:.0007,dots:150,r:2.2,op:.30,ph:5.5},
-    {y:.52,amp:25,freq:.006,speed:.002,dots:100,r:1.1,op:.15,ph:1},
-    {y:.42,amp:38,freq:.0045,speed:.0013,dots:115,r:1.4,op:.20,ph:3.5},
+    {y:.65,amp:40,freq:.003,speed:.0012,dots:160,r:2.0,op:.35,ph:0},
+    {y:.70,amp:50,freq:.0025,speed:.0009,dots:140,r:1.8,op:.28,ph:1.5},
+    {y:.75,amp:35,freq:.004,speed:.0015,dots:130,r:1.5,op:.22,ph:3},
+    {y:.60,amp:45,freq:.0035,speed:.001,dots:120,r:1.6,op:.25,ph:4.5},
+    {y:.80,amp:30,freq:.005,speed:.0018,dots:110,r:1.3,op:.18,ph:2},
+    {y:.68,amp:55,freq:.002,speed:.0007,dots:150,r:2.2,op:.30,ph:5.5},
+    {y:.72,amp:25,freq:.006,speed:.002,dots:100,r:1.1,op:.15,ph:1},
+    {y:.62,amp:38,freq:.0045,speed:.0013,dots:115,r:1.4,op:.20,ph:3.5},
   ];
   var t=0;
   function draw(){
@@ -1231,7 +1231,7 @@ document.querySelectorAll('.fq').forEach(function(q){
     wx.clearRect(0,0,W,H);
     
     // Central glow
-    var gx=W/2,gy=H*0.48;
+    var gx=W/2,gy=H*0.68;
     var pulse=0.5+0.5*Math.sin(t*0.002);
     var g=wx.createRadialGradient(gx,gy,0,gx,gy,300+pulse*50);
     g.addColorStop(0,'rgba(0,229,160,'+(0.06+pulse*0.03)+')');
@@ -1287,15 +1287,4 @@ document.querySelectorAll('.fq').forEach(function(q){
         
         // Hot center
         wx.beginPath();
-        wx.arc(px,py,wv.r*0.35,0,Math.PI*2);
-        wx.fillStyle='rgba(160,255,220,'+(alpha*0.8)+')';
-        wx.fill();
-      }
-    }
-    requestAnimationFrame(draw);
-  }
-  draw();
-})();
-</script>
-</body>
-</html>
+        wx.arc(px,py,wv.r*0.35,
