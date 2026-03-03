@@ -134,8 +134,8 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 .nav.solid::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,229,160,.12),rgba(255,20,147,.12),transparent)}
 .nv{display:flex;align-items:center;justify-content:space-between;max-width:1400px;margin:0 auto;padding:0 clamp(1.5rem,4vw,3.5rem)}
 .logo{display:flex;align-items:center;gap:.8rem;text-decoration:none;color:var(--w);transition:all .4s var(--ease)}
-.logo__i{width:44px;height:44px;border:1.5px solid rgba(0,229,160,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;transition:all .5s var(--ease);background:rgba(0,229,160,.04);position:relative;overflow:hidden}
-.logo__i::before{content:'';position:absolute;inset:-50%;background:conic-gradient(from 0deg,transparent,rgba(0,229,160,.1),transparent,rgba(0,229,160,.1),transparent);animation:logoSpin 6s linear infinite;opacity:0;transition:opacity .5s}
+.logo__i{width:44px;height:44px;border:1.5px solid rgba(255,20,147,.5);border-radius:12px;display:flex;align-items:center;justify-content:center;transition:all .5s var(--ease);background:rgba(255,20,147,.1);position:relative;overflow:hidden}
+.logo__i::before{content:'';position:absolute;inset:-50%;background:conic-gradient(from 0deg,transparent,rgba(255,20,147,.12),transparent,rgba(255,20,147,.12),transparent);animation:logoSpin 6s linear infinite;opacity:0;transition:opacity .5s}
 .logo:hover .logo__i::before{opacity:1}
 @keyframes logoSpin{to{transform:rotate(360deg)}}
 .logo__i svg{width:20px;height:20px;position:relative;z-index:1}
@@ -147,7 +147,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 .nl a:hover{color:var(--w);background:rgba(232,230,225,.04)}
 .nl a svg{pointer-events:none;width:14px;height:14px;opacity:.35;transition:all .3s var(--ease);stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .nl a:hover svg{opacity:.7;stroke:var(--c1)}
-.ncta{color:#FF1493!important;font-weight:600!important;border:1px solid rgba(255,20,147,.3)!important;border-radius:100px!important;padding:.5rem 1.5rem!important;background:rgba(255,20,147,.05)!important;gap:.4rem!important;transition:all .4s var(--ease)!important}
+.ncta{color:#FF1493!important;font-weight:600!important;border:1px solid rgba(255,20,147,.3)!important;border-radius:100px!important;padding:.5rem 1.5rem!important;background:rgba(255,20,147,.1)!important;gap:.4rem!important;transition:all .4s var(--ease)!important}
 .ncta:hover{background:#FF1493!important;color:#fff!important;box-shadow:0 0 35px rgba(255,20,147,.25)!important;transform:translateY(-1px)}
 .ncta svg{opacity:.6!important}
 .ncta:hover svg{opacity:1!important;stroke:#000!important}
@@ -436,7 +436,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 
 <a href="#tjenester" class="skip" style="position:absolute;top:-100%;left:0;background:var(--c1);color:#000;padding:.8rem 1.5rem;z-index:9999;font-weight:600;border-radius:0 0 8px 0;transition:top .3s" onfocus="this.style.top='0'" onblur="this.style.top='-100%'">Hopp til innhold</a>
 <nav class="nav" id="nav"><div class="nv">
-<a href="/" class="logo"><div class="logo__i"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 14L10 4l7 10"/><path d="M7 10l3-4 3 4" opacity=".3"/></svg></div><span class="logo__t">webbyrå<span>.no</span></span></a>
+<a href="/" class="logo"><div class="logo__i"><svg viewBox="0 0 20 20" fill="none" stroke="#FF1493" stroke-width="2.2" stroke-linecap="round"><path d="M3 14L10 4l7 10"/><path d="M7 10l3-4 3 4" opacity=".3"/></svg></div><span class="logo__t">webbyrå.no</span></a>
 <ul class="nl" id="nl">
 <li><a href="#tjenester"><svg viewBox="0 0 18 18" aria-hidden="true"><rect x="1" y="1" width="7" height="7" rx="1.5"/><rect x="10" y="1" width="7" height="7" rx="1.5"/><rect x="1" y="10" width="7" height="7" rx="1.5"/><rect x="10" y="10" width="7" height="7" rx="1.5"/></svg>Tjenester</a></li>
 <li><a href="#prosess"><svg viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="7"/><polyline points="9 5 9 9 12 11"/></svg>Prosess</a></li>
@@ -822,7 +822,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <footer class="ft2">
 <div class="ft2__grid">
 <div class="ft2__brand">
-<a href="/" class="logo"><div class="logo__i"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 14L10 4l7 10"/><path d="M7 10l3-4 3 4" opacity=".3"/></svg></div><span class="logo__t">webbyrå.no</span></a>
+<a href="/" class="logo"><div class="logo__i"><svg viewBox="0 0 20 20" fill="none" stroke="#FF1493" stroke-width="2" stroke-linecap="round"><path d="M3 14L10 4l7 10"/><path d="M7 10l3-4 3 4" opacity=".3"/></svg></div><span class="logo__t">webbyrå.no</span></a>
 <p>Norges fremste webbyrå. Vi designer, utvikler og drifter digitale opplevelser som driver vekst for ambisiøse bedrifter.</p>
 </div>
 <div class="ft2__col">
@@ -1222,10 +1222,9 @@ document.querySelectorAll('.fq').forEach(function(q){
       // Core dot
       cx2.beginPath();
       cx2.arc(v[0],v[1],2.5*v[2],0,Math.PI*2);
-      cx2.fillStyle='rgba(0,229,160,'+(0.5+0.3*vPulse)+')';
+      cx2.fillStyle="rgba(0,229,160,"+(0.5+0.3*vPulse)+")";
       cx2.fill();
     }
-
     requestAnimationFrame(draw);
   }
   draw();
