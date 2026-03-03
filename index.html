@@ -269,9 +269,25 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 /* ECO */
 .eco{position:relative;overflow:hidden}
 .eco__gh{position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);font-family:var(--display);font-weight:800;font-size:clamp(18rem,32vw,42rem);color:transparent;-webkit-text-stroke:1px var(--w04);line-height:.75;pointer-events:none;user-select:none;animation:breathe 7s ease-in-out infinite;letter-spacing:-.06em}
-.eco__g{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2.5rem;position:relative;z-index:1}
-.eco__p{padding:.5rem 1.2rem;border-radius:100px;border:1px solid var(--w08);font-size:.76rem;color:var(--w30);transition:all .4s var(--ease);font-weight:500;text-decoration:none}
-.eco__p:hover{border-color:var(--c1);color:var(--c1);background:rgba(0,229,160,.03);box-shadow:0 0 20px rgba(0,229,160,.06)}
+.eco__g{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;margin-top:3rem;position:relative;z-index:1}
+.eco__p{position:relative;padding:1.8rem 1.5rem;border-radius:16px;border:1px solid var(--w08);font-size:.85rem;color:var(--w50);transition:all .5s var(--ease);font-weight:600;text-decoration:none;display:flex;flex-direction:column;gap:.6rem;background:var(--card);overflow:hidden}
+.eco__p::before{content:'';position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(0,229,160,.5),rgba(122,122,201,.3),rgba(255,20,147,.5));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .5s var(--ease);pointer-events:none;z-index:1}
+.eco__p::after{content:'';position:absolute;bottom:0;left:0;right:0;height:60%;background:linear-gradient(to top,rgba(0,229,160,.04),transparent);opacity:0;transition:opacity .5s var(--ease)}
+.eco__p:hover{border-color:transparent;transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.3),0 0 40px rgba(0,229,160,.06)}
+.eco__p:hover::before{opacity:1}
+.eco__p:hover::after{opacity:1}
+.eco__p:hover .eco__name{color:var(--w)}
+.eco__p:hover .eco__dot{transform:scale(1.3);box-shadow:0 0 12px rgba(0,229,160,.4)}
+.eco__dot{width:10px;height:10px;border-radius:50%;background:var(--c1);transition:all .5s var(--ease);flex-shrink:0}
+.eco__name{font-family:var(--display);font-size:1.1rem;font-weight:700;color:var(--w70);transition:color .4s;letter-spacing:-.02em}
+.eco__desc{font-size:.72rem;color:var(--w30);line-height:1.5}
+.eco__row{display:flex;align-items:center;gap:.6rem}
+@keyframes orbitDot{0%{transform:rotate(0deg) translateX(38%) rotate(0deg)}100%{transform:rotate(360deg) translateX(38%) rotate(-360deg)}}
+.eco__orbit{position:absolute;top:1rem;right:1rem;width:40px;height:40px;opacity:.15;pointer-events:none}
+.eco__orbit span{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--c1);top:50%;left:50%;animation:orbitDot 6s linear infinite}
+.eco__orbit span:nth-child(2){background:var(--c2);animation-duration:8s;animation-direction:reverse}
+.eco__p:hover .eco__orbit{opacity:.5}
+/* eco hover in block above */
 
 /* TECH */
 .tp{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:2rem}
@@ -731,7 +747,15 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <section class="sec eco" id="oko"><div class="ctn">
 <div class="eco__gh">7</div>
 <div class="sec__lb">Vårt økosystem</div><h2 class="sec__t">Et nettverk av<br><span class="grad">digitale merkevarer</span></h2><p class="sec__d">Vi driver et voksende økosystem av spesialiserte domener. Alle bygget med vår egen teknologi.</p>
-<div class="eco__g"><a href="#" class="eco__p">webbyrå.no</a><a href="#" class="eco__p">smbweb.no</a><a href="#" class="eco__p">ainettside.no</a><a href="#" class="eco__p">ainettbutikk.no</a><a href="#" class="eco__p">webmedia.no</a><a href="#" class="eco__p">webadresse.no</a><a href="#" class="eco__p">web4.no</a></div>
+<div class="eco__g">
+<a href="https://xn--webbyr-fua.no" class="eco__p"><div class="eco__orbit"><span></span><span></span></div><div class="eco__row"><span class="eco__dot"></span><span class="eco__name">webbyrå.no</span></div><span class="eco__desc">Hovedmerket. Premium webdesign og utvikling for norske bedrifter.</span></a>
+<a href="#" class="eco__p"><div class="eco__orbit"><span></span><span></span></div><div class="eco__row"><span class="eco__dot" style="background:var(--c2)"></span><span class="eco__name">smbweb.no</span></div><span class="eco__desc">Nettsider for sma og mellomstore bedrifter. Raskt, rimelig og profesjonelt.</span></a>
+<a href="#" class="eco__p"><div class="eco__orbit"><span></span><span></span></div><div class="eco__row"><span class="eco__dot"></span><span class="eco__name">ainettside.no</span></div><span class="eco__desc">AI-drevne nettsider som tilpasser seg brukeren automatisk.</span></a>
+<a href="#" class="eco__p"><div class="eco__orbit"><span></span><span></span></div><div class="eco__row"><span class="eco__dot" style="background:var(--c2)"></span><span class="eco__name">ainettbutikk.no</span></div><span class="eco__desc">Nettbutikker med kunstig intelligens for smartere salg.</span></a>
+<a href="#" class="eco__p"><div class="eco__orbit"><span></span><span></span></div><div class="eco__row"><span class="eco__dot"></span><span class="eco__name">webmedia.no</span></div><span class="eco__desc">Innholdsproduksjon, sosiale medier og digital markedsforing.</span></a>
+<a href="#" class="eco__p"><div class="eco__orbit"><span></span><span></span></div><div class="eco__row"><span class="eco__dot" style="background:var(--c2)"></span><span class="eco__name">webadresse.no</span></div><span class="eco__desc">Domenehandel og premium .no-adresser for norske merkevarer.</span></a>
+<a href="#" class="eco__p"><div class="eco__orbit"><span></span><span></span></div><div class="eco__row"><span class="eco__dot"></span><span class="eco__name">web4.no</span></div><span class="eco__desc">Neste generasjon webteknologi. Headless CMS og moderne rammeverk.</span></a>
+</div>
 </div></section>
 
 <!-- BYER -->
@@ -818,7 +842,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
   <div class="cta-content">
     <h2>Klar for en digital<br><span class="grad">partner?</span></h2>
     <p>Vi tar oss av alt. design, utvikling, drift og vekst. Du fokuserer på bedriften, vi leverer resultatene.</p>
-    <a href="/cdn-cgi/l/email-protection#08606d61487f6d6a6a717a6969266667" class="btn btn--w">Kontakt oss <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    <a href="mailto:hei@webbyraa.no" class="btn btn--w">Kontakt oss <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
   </div>
 </section>
 
@@ -849,7 +873,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 </div>
 <div class="ft2__col">
 <h4>Kontakt</h4>
-<a href="/cdn-cgi/l/email-protection#08606d61487f6d6a6a717a6969266667">hei@webbyrå.no</a>
+<a href="mailto:hei@webbyraa.no">hei@webbyrå.no</a>
 <a href="/#faq">Vanlige spørsmål</a>
 <a href="/#byer">Byer vi betjener</a>
 <a href="/sitemap.xml">Sidekart</a>
@@ -866,7 +890,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 </div>
 </div>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // cursor removed
 // === SCROLL PROGRESS ===
 window.addEventListener('scroll',function(){
@@ -1213,4 +1237,14 @@ document.querySelectorAll('.fq').forEach(function(q){
       cx2.fill();
 
       cx2.beginPath();
-      cx2.arc(v[0],v[1],2.
+      cx2.arc(v[0],v[1],2.5*v[2],0,Math.PI*2);
+      cx2.fillStyle='rgba(0,229,160,'+(0.5+0.3*vPulse)+')';
+      cx2.fill();
+    }
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+</body>
+</html>
