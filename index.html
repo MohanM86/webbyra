@@ -739,7 +739,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <a href="/blogg/hva-koster-nettside-2026/" class="blog__card gb">
 <div class="blog__meta">Webdesign &middot; 6 min</div>
 <h3 class="blog__t">Hva koster en nettside i 2026?</h3>
-<p class="blog__d">Priser, tidslinje og hva du kan forvente fra et norsk webdesignbyraa.</p>
+<p class="blog__d">Priser, tidslinje og hva du kan forvente fra et norsk webdesignbyrå.</p>
 <span class="blog__link">Les artikkelen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
 </a>
 <a href="/blogg/nettside-konverterer-ikke/" class="blog__card gb">
@@ -750,32 +750,32 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 </a>
 <a href="/blogg/ai-forbedre-nettside/" class="blog__card gb">
 <div class="blog__meta">AI &middot; 7 min</div>
-<h3 class="blog__t">Slik bruker du AI paa nettsiden din</h3>
-<p class="blog__d">Automatiser innhold, personaliser brukeropplevelsen og bli mer synlig i sokeresultatene.</p>
+<h3 class="blog__t">Slik bruker du AI på nettsiden din</h3>
+<p class="blog__d">Automatiser innhold, personaliser brukeropplevelsen og bli mer synlig i søkeresultatene.</p>
 <span class="blog__link">Les artikkelen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
 </a>
 <a href="/blogg/shopify-vs-woocommerce/" class="blog__card gb">
 <div class="blog__meta">E-handel &middot; 9 min</div>
 <h3 class="blog__t">Shopify vs WooCommerce vs skreddersydd</h3>
-<p class="blog__d">Vi sammenligner de tre mest populaere nettbutikklosningene for norske bedrifter.</p>
+<p class="blog__d">Vi sammenligner de tre mest populære nettbutikkløsningene for norske bedrifter.</p>
 <span class="blog__link">Les artikkelen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
 </a>
 <a href="/blogg/google-ads-smaa-bedrifter/" class="blog__card gb">
 <div class="blog__meta">Google Ads &middot; 6 min</div>
-<h3 class="blog__t">Google Ads: Faa mest ut av budsjettet</h3>
-<p class="blog__d">Praktiske tips for kampanjer som gir avkastning uten aa bruke mer enn du maa.</p>
+<h3 class="blog__t">Google Ads: Få mest ut av budsjettet</h3>
+<p class="blog__d">Praktiske tips for kampanjer som gir avkastning uten å bruke mer enn du må.</p>
 <span class="blog__link">Les artikkelen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
 </a>
 <a href="/blogg/brukeropplevelse-viktigere-enn-design/" class="blog__card gb">
 <div class="blog__meta">UX &middot; 5 min</div>
 <h3 class="blog__t">Brukeropplevelse er viktigere enn design</h3>
-<p class="blog__d">God UX oker konvertering, reduserer fluktrate og bygger tillit hos kundene dine.</p>
+<p class="blog__d">God UX øker konvertering, reduserer fluktrate og bygger tillit hos kundene dine.</p>
 <span class="blog__link">Les artikkelen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
 </a>
 <a href="/blogg/norsk-hosting-vs-internasjonal/" class="blog__card gb">
 <div class="blog__meta">Hosting &middot; 4 min</div>
 <h3 class="blog__t">Norsk hosting vs internasjonal hosting</h3>
-<p class="blog__d">Serverplassering paavirker lastetid og SEO. Norsk hosting gir bedre ytelse.</p>
+<p class="blog__d">Serverplassering påvirker lastetid og SEO. Norsk hosting gir bedre ytelse.</p>
 <span class="blog__link">Les artikkelen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
 </a>
 <a href="/blogg/digital-strategi-2026-trender/" class="blog__card gb">
@@ -1274,6 +1274,11 @@ document.querySelectorAll('.fq').forEach(function(q){
       cx2.fill();
 
       // Core dot
+      cx2.beginPath();
+      cx2.arc(v[0],v[1],2.5*v[2],0,Math.PI*2);
+      cx2.fillStyle='rgba(0,229,160,'+(0.5+0.3*vPulse)+')';
+      cx2.fill();
+
       cx2.beginPath();
       cx2.arc(v[0],v[1],2.5*v[2],0,Math.PI*2);
       cx2.fillStyle='rgba(0,229,160,'+(0.5+0.3*vPulse)+')';
