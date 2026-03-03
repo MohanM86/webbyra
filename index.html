@@ -420,6 +420,11 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 .ft2__dot{width:5px;height:5px;border-radius:50%;background:rgba(255,20,147,.5);animation:ftpulse 2s ease infinite}
 @keyframes ftpulse{0%,100%{opacity:.4}50%{opacity:1;box-shadow:0 0 8px rgba(255,20,147,.4)}}
 
+/* GRADIENT BORDER HOVER */
+.gb{position:relative}
+.gb::after{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(0,229,160,.5),rgba(122,122,201,.3),rgba(255,20,147,.5));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .5s var(--ease);pointer-events:none;z-index:1}
+.gb:hover::after{opacity:1}
+.gb:hover{border-color:transparent!important;box-shadow:0 0 25px rgba(0,229,160,.05),0 0 25px rgba(255,20,147,.04),0 16px 50px rgba(0,0,0,.25)}
 @media(prefers-reduced-motion:reduce){.orb,.streak,.cube__canvas{animation:none!important}.cur,.trail{display:none}}
 /* RESPONSIVE */
 @media(max-width:1024px){.hero{z-index:1;grid-template-columns:1fr;gap:2rem}.hero__l,.hero__r{padding:0 clamp(1.5rem,4vw,3.5rem)}.cube__canvas{width:320px;height:320px}.bento{grid-template-columns:repeat(6,1fr)}.bc--lg{grid-column:span 6}.bc--md{grid-column:span 3}.bc--half{grid-column:span 6}.stats{grid-template-columns:repeat(2,1fr)}.st{border-bottom:1px solid var(--w08)}.phil{grid-template-columns:1fr}.bransjer{grid-template-columns:repeat(3,1fr)}.deliv{grid-template-columns:repeat(2,1fr)}.pricing{grid-template-columns:1fr}.partners{grid-template-columns:repeat(2,1fr)}.blog__grid{grid-template-columns:1fr}}
@@ -475,11 +480,11 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <div class="bc__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
 <h3 class="bc__n">Nettsideutvikling</h3><p class="bc__desc">Nettsider som forteller din historie og konverterer besøkende. Responsivt design, lynrask ytelse og SEO innebygd fra dag én.</p></div>
 
-<div class="bc bc--md">
+<div class="bc bc--md gb">
 <div class="bc__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
 <h3 class="bc__n">Webapplikasjoner</h3><p class="bc__desc">Skreddersydde dashboards, plattformer og verktøy med moderne teknologi.</p></div>
 
-<div class="bc bc--md">
+<div class="bc bc--md gb">
 <div class="bc__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div>
 <h3 class="bc__n">Nettbutikk & e-handel</h3><p class="bc__desc">Shopify, WooCommerce eller skreddersydd — optimalisert for salg og vekst.</p></div>
 
@@ -487,23 +492,23 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <div class="bc__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
 <h3 class="bc__n">Søkemotoroptimalisering</h3><p class="bc__desc">Teknisk SEO, innholdsstrategi og lenkebygging. Vi sørger for at nettsiden din blir funnet — og at Google elsker den.</p></div>
 
-<div class="bc bc--md">
+<div class="bc bc--md gb">
 <div class="bc__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
 <h3 class="bc__n">AI-integrasjon</h3><p class="bc__desc">Chatboter, AI-assistenter og smart automatisering bygget inn i nettsiden din.</p></div>
 
-<div class="bc bc--md">
+<div class="bc bc--md gb">
 <div class="bc__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
 <h3 class="bc__n">Google Ads</h3><p class="bc__desc">Betalt annonsering, SEM, remarketing og kampanjer som gir målbar avkastning.</p></div>
 
-<div class="bc bc--half">
+<div class="bc bc--half gb">
 <div class="bc__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
 <h3 class="bc__n">Arkitektur & rådgivning</h3><p class="bc__desc">Robust infrastruktur og skalerbar arkitektur. De riktige teknologivalgene.</p></div>
 
-<div class="bc bc--half">
+<div class="bc bc--half gb">
 <div class="bc__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
 <h3 class="bc__n">Konverteringsoptimalisering</h3><p class="bc__desc">A/B-testing, brukeranalyse og datadrevet optimalisering som øker salg og leads.</p></div>
 
-<div class="bc bc--md">
+<div class="bc bc--md gb">
 <div class="bc__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
 <h3 class="bc__n">Logo & visuell identitet</h3><p class="bc__desc">Logodesign, fargepalett, typografi og komplett brandbook.</p></div>
 
@@ -511,15 +516,15 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <div class="bc__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
 <h3 class="bc__n">Innholdsproduksjon</h3><p class="bc__desc">Webtekst, copywriting, foto og video. Vi forteller historien din slik at kundene lytter og handler.</p></div>
 
-<div class="bc bc--md">
+<div class="bc bc--md gb">
 <div class="bc__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
 <h3 class="bc__n">Sosiale medier</h3><p class="bc__desc">Strategi, innhold og annonsering på Facebook, Instagram, LinkedIn og TikTok.</p></div>
 
-<div class="bc bc--half">
+<div class="bc bc--half gb">
 <div class="bc__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg></div>
 <h3 class="bc__n">Domene & hosting</h3><p class="bc__desc">Domeneregistrering, DNS, SSL-sertifikater og pålitelig hosting med 99.9% oppetid.</p></div>
 
-<div class="bc bc--half">
+<div class="bc bc--half gb">
 <div class="bc__ico"><svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
 <h3 class="bc__n">E-post & nyhetsbrev</h3><p class="bc__desc">Bedrifts-e-post, nyhetsbrev og e-postautomatisering som bygger relasjoner.</p></div>
 
@@ -528,7 +533,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <h3 class="bc__n">Vedlikehold & support</h3><p class="bc__desc">Månedlige avtaler med sikkerhetsoppdateringer, ytelsesovervåking, daglig backup og prioritert teknisk support.</p></div>
 
 </div>
-<div class="stats"><div class="st"><div class="st__n" data-target="150" data-suffix="+">0</div><div class="st__l">Prosjekter levert</div></div><div class="st"><div class="st__n" data-target="98" data-suffix="%">0</div><div class="st__l">Kundetilfredshet</div></div><div class="st"><div class="st__n" data-target="35">0</div><div class="st__l">Eksperter</div></div><div class="st"><div class="st__n" data-target="7" data-suffix="+">0</div><div class="st__l">År erfaring</div></div></div>
+<div class="stats gb"><div class="st"><div class="st__n" data-target="150" data-suffix="+">0</div><div class="st__l">Prosjekter levert</div></div><div class="st"><div class="st__n" data-target="98" data-suffix="%">0</div><div class="st__l">Kundetilfredshet</div></div><div class="st"><div class="st__n" data-target="35">0</div><div class="st__l">Eksperter</div></div><div class="st"><div class="st__n" data-target="7" data-suffix="+">0</div><div class="st__l">År erfaring</div></div></div>
 </div></section>
 
 <section class="sec" id="prosess" style="background:var(--bg2)"><div class="ctn">
@@ -543,17 +548,17 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <section class="sec" id="filosofi"><div class="ctn">
 <div class="sec__hdr"><div><div class="sec__lb">Vår filosofi</div><h2 class="sec__t">Vi bygger ikke nettsider.<br>Vi bygger <span class="grad">vekstmaskiner</span></h2></div></div>
 <div class="phil">
-<div class="phil__item">
+<div class="phil__item gb">
 <div class="phil__num">01</div>
 <h3 class="phil__t">Ingen maler. Bare skreddersøm.</h3>
 <p class="phil__d">Vi starter aldri med en ferdig mal. Hver nettside er designet fra bunnen av, tilpasset din merkevare, dine mål og dine brukere. Det er det som skiller godt fra eksepsjonelt.</p>
 </div>
-<div class="phil__item">
+<div class="phil__item gb">
 <div class="phil__num">02</div>
 <h3 class="phil__t">Ytelse er ikke valgfritt.</h3>
 <p class="phil__d">Hvert millisekund teller. Vi bygger med perfekte Core Web Vitals, semantisk HTML og optimalisert kode som standard — ikke som et tillegg du må betale ekstra for.</p>
 </div>
-<div class="phil__item">
+<div class="phil__item gb">
 <div class="phil__num">03</div>
 <h3 class="phil__t">Design med data, ikke magefølelse.</h3>
 <p class="phil__d">Vakre nettsider som ingen bruker er meningsløse. Vi kombinerer estetikk med brukerdata, varmekart og konverteringsanalyse for å lage sider som faktisk leverer resultater.</p>
@@ -567,27 +572,27 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <h2 class="sec__t">Vi forstår <span class="grad">din bransje</span></h2>
 <p class="sec__d">Dybdekunnskap i bransjene vi jobber med gir bedre resultater — raskere.</p>
 <div class="bransjer">
-<div class="bransje">
+<div class="bransje gb">
 <div class="bransje__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
 <h4>E-handel</h4><p>Nettbutikker som selger</p>
 </div>
-<div class="bransje">
+<div class="bransje gb">
 <div class="bransje__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
 <h4>Advokatfirma</h4><p>Tillit og autoritet</p>
 </div>
-<div class="bransje">
+<div class="bransje gb">
 <div class="bransje__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
 <h4>SaaS</h4><p>Plattformer som skalerer</p>
 </div>
-<div class="bransje">
+<div class="bransje gb">
 <div class="bransje__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
 <h4>Helse</h4><p>WCAG og personvern</p>
 </div>
-<div class="bransje">
+<div class="bransje gb">
 <div class="bransje__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
 <h4>Finans</h4><p>Sikkerhet og compliance</p>
 </div>
-<div class="bransje">
+<div class="bransje gb">
 <div class="bransje__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
 <h4>Eiendom</h4><p>Visuelle opplevelser</p>
 </div>
@@ -600,28 +605,28 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <h2 class="sec__t">Hva du faktisk <span class="grad">får levert</span></h2>
 <p class="sec__d">Alt vi leverer i hvert partnerskap — fra design til drift.</p>
 <div class="deliv">
-<div class="deliv__col">
+<div class="deliv__col gb">
 <h4 class="deliv__h">Design</h4>
 <div class="deliv__item"><span class="deliv__check">&#10003;</span> Komplett designsystem</div>
 <div class="deliv__item"><span class="deliv__check">&#10003;</span> Mobil, nettbrett og desktop</div>
 <div class="deliv__item"><span class="deliv__check">&#10003;</span> Interaktive prototyper</div>
 <div class="deliv__item"><span class="deliv__check">&#10003;</span> Brukerflyt og wireframes</div>
 </div>
-<div class="deliv__col">
+<div class="deliv__col gb">
 <h4 class="deliv__h">Utvikling</h4>
 <div class="deliv__item"><span class="deliv__check">&#10003;</span> Skreddersydd kode (ingen maler)</div>
 <div class="deliv__item"><span class="deliv__check">&#10003;</span> CMS for innholdsstyring</div>
 <div class="deliv__item"><span class="deliv__check">&#10003;</span> 100/100 PageSpeed-score</div>
 <div class="deliv__item"><span class="deliv__check">&#10003;</span> SSL, hosting og domene-oppsett</div>
 </div>
-<div class="deliv__col">
+<div class="deliv__col gb">
 <h4 class="deliv__h">SEO & vekst</h4>
 <div class="deliv__item"><span class="deliv__check">&#10003;</span> Teknisk SEO-oppsett</div>
 <div class="deliv__item"><span class="deliv__check">&#10003;</span> Schema.org strukturerte data</div>
 <div class="deliv__item"><span class="deliv__check">&#10003;</span> Google Analytics & Search Console</div>
 <div class="deliv__item"><span class="deliv__check">&#10003;</span> Sitemap og robots.txt</div>
 </div>
-<div class="deliv__col">
+<div class="deliv__col gb">
 <h4 class="deliv__h">Drift & vekst</h4>
 <div class="deliv__item"><span class="deliv__check">&#10003;</span> Løpende drift og vedlikehold</div>
 <div class="deliv__item"><span class="deliv__check">&#10003;</span> Sikkerhetsovervåking 24/7</div>
@@ -637,7 +642,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <h2 class="sec__t">Én fast månedspris.<br><span class="grad">Alt inkludert.</span></h2>
 <p class="sec__d">Vi er ikke et byrå du leier for ett prosjekt. Vi er din digitale avdeling — og vi tar ansvar for alt.</p>
 <div class="pricing">
-<div class="price__card price__card--pop" style="grid-column:span 3;display:grid;grid-template-columns:1fr 1fr;gap:3rem;padding:3rem">
+<div class="price__card price__card--pop gb" style="grid-column:span 3;display:grid;grid-template-columns:1fr 1fr;gap:3rem;padding:3rem">
 <div>
 <div class="price__label">Månedlig partnerskap</div>
 <div class="price__amount" style="font-size:1.5rem;margin-bottom:1rem">Fast månedspris — skreddersydd for deg</div>
@@ -668,22 +673,22 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <h2 class="sec__t">Ikke bare et byrå.<br><span class="grad">Din digitale avdeling.</span></h2>
 <p class="sec__d">Vi er ikke et byrå du leier inn for ett prosjekt. Vi er den digitale avdelingen bedriften din trenger — uten å ansette et helt team.</p>
 <div class="partners">
-<div class="partner">
+<div class="partner gb">
 <div class="partner__logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
 <h4>Alt inkludert</h4>
 <p>Design, utvikling, hosting, drift, SEO og support — én faktura</p>
 </div>
-<div class="partner">
+<div class="partner gb">
 <div class="partner__logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
 <h4>Alltid tilgjengelig</h4>
 <p>Dedikert team som kjenner bedriften din og responderer raskt</p>
 </div>
-<div class="partner">
+<div class="partner gb">
 <div class="partner__logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
 <h4>Kontinuerlig forbedring</h4>
 <p>Vi optimaliserer løpende basert på data og resultater</p>
 </div>
-<div class="partner">
+<div class="partner gb">
 <div class="partner__logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
 <h4>Eget domene-økosystem</h4>
 <p>7 premium .no-domener som styrker din digitale tilstedeværelse</p>
@@ -695,7 +700,7 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <section class="sec"><div class="ctn">
 <div class="sec__lb">Teknologi</div><h2 class="sec__t">Teknologien bak <span class="grad">veksten</span></h2>
 <div class="tp"><span class="tpp">Next.js</span><span class="tpp">React</span><span class="tpp">TypeScript</span><span class="tpp">Tailwind CSS</span><span class="tpp">Node.js</span><span class="tpp">Sanity CMS</span><span class="tpp">Shopify</span><span class="tpp">WordPress</span><span class="tpp">Vercel</span><span class="tpp">PostgreSQL</span><span class="tpp">Prisma</span><span class="tpp">Figma</span><span class="tpp">Framer Motion</span><span class="tpp">Stripe</span><span class="tpp">GraphQL</span><span class="tpp">Docker</span></div>
-<div class="testi" style="background:linear-gradient(135deg,rgba(0,229,160,.03),var(--card))"><div class="testi__q" style="opacity:.04;font-size:8rem;top:-1rem">&#8734;</div><p class="testi__txt" style="font-size:clamp(1.1rem,1.4vw,1.25rem);max-width:700px">Vi tror ikke på engangsleveranser. Vi tror på partnerskap. Derfor drifter vi alt — design, kode, hosting, sikkerhet og vekst — på en fast månedlig avtale. Du eier resultatet. Vi eier ansvaret.</p><div class="testi__a" style="margin-top:1.5rem"><div style="display:flex;gap:2rem;flex-wrap:wrap"><div><div style="font-family:var(--display);font-weight:800;font-size:1.5rem;color:var(--c1)">Alt inkludert</div><div style="font-size:.68rem;color:var(--w30)">Én månedspris. Ingen overraskelser.</div></div><div><div style="font-family:var(--display);font-weight:800;font-size:1.5rem">Fra A til Å</div><div style="font-size:.68rem;color:var(--w30)">Design, utvikling, drift og vekst.</div></div><div><div style="font-family:var(--display);font-weight:800;font-size:1.5rem">Ditt team</div><div style="font-size:.68rem;color:var(--w30)">Dedikerte eksperter som kjenner deg.</div></div></div></div></div>
+<div class="testi gb" style="background:linear-gradient(135deg,rgba(0,229,160,.03),var(--card))"><div class="testi__q" style="opacity:.04;font-size:8rem;top:-1rem">&#8734;</div><p class="testi__txt" style="font-size:clamp(1.1rem,1.4vw,1.25rem);max-width:700px">Vi tror ikke på engangsleveranser. Vi tror på partnerskap. Derfor drifter vi alt — design, kode, hosting, sikkerhet og vekst — på en fast månedlig avtale. Du eier resultatet. Vi eier ansvaret.</p><div class="testi__a" style="margin-top:1.5rem"><div style="display:flex;gap:2rem;flex-wrap:wrap"><div><div style="font-family:var(--display);font-weight:800;font-size:1.5rem;color:var(--c1)">Alt inkludert</div><div style="font-size:.68rem;color:var(--w30)">Én månedspris. Ingen overraskelser.</div></div><div><div style="font-family:var(--display);font-weight:800;font-size:1.5rem">Fra A til Å</div><div style="font-size:.68rem;color:var(--w30)">Design, utvikling, drift og vekst.</div></div><div><div style="font-family:var(--display);font-weight:800;font-size:1.5rem">Ditt team</div><div style="font-size:.68rem;color:var(--w30)">Dedikerte eksperter som kjenner deg.</div></div></div></div></div>
 </div></section>
 
 <!-- BLOGG / INNSIKT -->
@@ -704,19 +709,19 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <h2 class="sec__t">Fra <span class="grad">bloggen</span></h2>
 <p class="sec__d">Vi deler det vi lærer. Artikler om webdesign, utvikling, SEO og digital strategi.</p>
 <div class="blog__grid">
-<a href="#" class="blog__card">
+<a href="#" class="blog__card gb">
 <div class="blog__meta">SEO &middot; 8 min lesing</div>
 <h3 class="blog__t">Teknisk SEO-sjekkliste for 2026: Alt du må ha på plass</h3>
 <p class="blog__d">Core Web Vitals, strukturerte data og hastighetsoptimalisering — en komplett guide.</p>
 <span class="blog__link">Les artikkelen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
 </a>
-<a href="#" class="blog__card">
+<a href="#" class="blog__card gb">
 <div class="blog__meta">Webdesign &middot; 6 min lesing</div>
 <h3 class="blog__t">Hvorfor bedriften din trenger en nettside i 2026 (og hva den bør koste)</h3>
 <p class="blog__d">En ærlig oversikt over priser, tidslinje og hva du faktisk bør forvente.</p>
 <span class="blog__link">Les artikkelen <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
 </a>
-<a href="#" class="blog__card">
+<a href="#" class="blog__card gb">
 <div class="blog__meta">Konvertering &middot; 5 min lesing</div>
 <h3 class="blog__t">5 grunner til at nettsiden din ikke konverterer (og hvordan du fikser det)</h3>
 <p class="blog__d">De vanligste feilene vi ser — og enkle grep som gir umiddelbar effekt.</p>
@@ -793,12 +798,12 @@ body::before{content:'';position:fixed;inset:0;z-index:9989;pointer-events:none;
 <section class="sec" id="faq" style="background:var(--bg2)"><div class="ctn">
 <div class="sec__lb">Vanlige spørsmål</div><h2 class="sec__t">Ofte stilte <span class="grad">spørsmål</span></h2>
 <div class="faq">
-<div class="fi"><div class="fq">Hva koster det å lage en nettside?<span class="fp"><svg viewBox="0 0 16 16" stroke-linecap="round"><line x1="8" y1="4" x2="8" y2="12"/><line x1="4" y1="8" x2="12" y2="8"/></svg></span></div><div class="fa"><p>Fra 30.000 kr for en enkel bedriftsside til 500.000+ kr for komplekse nettbutikker og webapplikasjoner. Vi gir alltid uforpliktende prisestimat.</p></div></div>
-<div class="fi"><div class="fq">Hvor lang tid tar det?<span class="fp"><svg viewBox="0 0 16 16" stroke-linecap="round"><line x1="8" y1="4" x2="8" y2="12"/><line x1="4" y1="8" x2="12" y2="8"/></svg></span></div><div class="fa"><p>Bedriftsside: 4–8 uker. Nettbutikk: 6–12 uker. Komplekse webapplikasjoner: 8–20 uker.</p></div></div>
-<div class="fi"><div class="fq">Hjelper dere med søkemotoroptimalisering?<span class="fp"><svg viewBox="0 0 16 16" stroke-linecap="round"><line x1="8" y1="4" x2="8" y2="12"/><line x1="4" y1="8" x2="12" y2="8"/></svg></span></div><div class="fa"><p>Ja. Teknisk SEO, hastighetsoptimalisering og strukturerte data er innebygd. Vi tilbyr også løpende SEO-arbeid.</p></div></div>
-<div class="fi"><div class="fq">Lager dere responsive nettsider?<span class="fp"><svg viewBox="0 0 16 16" stroke-linecap="round"><line x1="8" y1="4" x2="8" y2="12"/><line x1="4" y1="8" x2="12" y2="8"/></svg></span></div><div class="fa"><p>Alle nettsider vi lager er fullt responsive og mobile-first. Vi tester på alle skjermstørrelser.</p></div></div>
-<div class="fi"><div class="fq">Kan dere hjelpe med eksisterende nettside?<span class="fp"><svg viewBox="0 0 16 16" stroke-linecap="round"><line x1="8" y1="4" x2="8" y2="12"/><line x1="4" y1="8" x2="12" y2="8"/></svg></span></div><div class="fa"><p>Absolutt. Redesign, ytelsesoptimalisering, CMS-migrering og ny funksjonalitet.</p></div></div>
-<div class="fi"><div class="fq">Tilbyr dere vedlikehold?<span class="fp"><svg viewBox="0 0 16 16" stroke-linecap="round"><line x1="8" y1="4" x2="8" y2="12"/><line x1="4" y1="8" x2="12" y2="8"/></svg></span></div><div class="fa"><p>Ja. Sikkerhetsoppdateringer, ytelsesovervåking, backup og teknisk support.</p></div></div>
+<div class="fi gb"><div class="fq">Hva koster det å lage en nettside?<span class="fp"><svg viewBox="0 0 16 16" stroke-linecap="round"><line x1="8" y1="4" x2="8" y2="12"/><line x1="4" y1="8" x2="12" y2="8"/></svg></span></div><div class="fa"><p>Fra 30.000 kr for en enkel bedriftsside til 500.000+ kr for komplekse nettbutikker og webapplikasjoner. Vi gir alltid uforpliktende prisestimat.</p></div></div>
+<div class="fi gb"><div class="fq">Hvor lang tid tar det?<span class="fp"><svg viewBox="0 0 16 16" stroke-linecap="round"><line x1="8" y1="4" x2="8" y2="12"/><line x1="4" y1="8" x2="12" y2="8"/></svg></span></div><div class="fa"><p>Bedriftsside: 4–8 uker. Nettbutikk: 6–12 uker. Komplekse webapplikasjoner: 8–20 uker.</p></div></div>
+<div class="fi gb"><div class="fq">Hjelper dere med søkemotoroptimalisering?<span class="fp"><svg viewBox="0 0 16 16" stroke-linecap="round"><line x1="8" y1="4" x2="8" y2="12"/><line x1="4" y1="8" x2="12" y2="8"/></svg></span></div><div class="fa"><p>Ja. Teknisk SEO, hastighetsoptimalisering og strukturerte data er innebygd. Vi tilbyr også løpende SEO-arbeid.</p></div></div>
+<div class="fi gb"><div class="fq">Lager dere responsive nettsider?<span class="fp"><svg viewBox="0 0 16 16" stroke-linecap="round"><line x1="8" y1="4" x2="8" y2="12"/><line x1="4" y1="8" x2="12" y2="8"/></svg></span></div><div class="fa"><p>Alle nettsider vi lager er fullt responsive og mobile-first. Vi tester på alle skjermstørrelser.</p></div></div>
+<div class="fi gb"><div class="fq">Kan dere hjelpe med eksisterende nettside?<span class="fp"><svg viewBox="0 0 16 16" stroke-linecap="round"><line x1="8" y1="4" x2="8" y2="12"/><line x1="4" y1="8" x2="12" y2="8"/></svg></span></div><div class="fa"><p>Absolutt. Redesign, ytelsesoptimalisering, CMS-migrering og ny funksjonalitet.</p></div></div>
+<div class="fi gb"><div class="fq">Tilbyr dere vedlikehold?<span class="fp"><svg viewBox="0 0 16 16" stroke-linecap="round"><line x1="8" y1="4" x2="8" y2="12"/><line x1="4" y1="8" x2="12" y2="8"/></svg></span></div><div class="fa"><p>Ja. Sikkerhetsoppdateringer, ytelsesovervåking, backup og teknisk support.</p></div></div>
 </div></div></section>
 
 <!-- WAVE CTA + FOOTER -->
@@ -1222,7 +1227,7 @@ document.querySelectorAll('.fq').forEach(function(q){
       // Core dot
       cx2.beginPath();
       cx2.arc(v[0],v[1],2.5*v[2],0,Math.PI*2);
-      cx2.fillStyle="rgba(0,229,160,"+(0.5+0.3*vPulse)+")";
+      cx2.fillStyle='rgba(0,229,160,'+(0.5+0.3*vPulse)+')';
       cx2.fill();
     }
     requestAnimationFrame(draw);
